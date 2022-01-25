@@ -1,0 +1,25 @@
+body {
+	background: url(../../Assets/backgroundFlowers.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+    /* background: rgba(210, 105, 121, 0.5); */
+	/* background-position
+    : bottom right; */
+	/* opacity: .25; */
+	
+	
+}
+.Title {
+	font-size: 150px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid black;
+}
+
+.hpLinks {
+	font-size: x-large;
+	display: flex;
+}
+li {
+    list-style-type: none;
+}
