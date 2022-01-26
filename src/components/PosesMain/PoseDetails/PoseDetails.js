@@ -6,24 +6,25 @@ import { useParams } from 'react-router-dom';
 import seeds from '../../../seeds.json';
 
 function PoseDetails(props) {
-	const [pose, setPose] = useState(seeds[0]);
+	const [pose, setPose] = useState(null);
 	const { id } = useParams();
 
-	// useEffect(() => {
-	// 	getPoses();
-	// 	console.log(getPoses);
-	// }, [id]);
+	useEffect(() => {
+		getPoses();
+	}, [id]);
 
-	// async function getPoses() {
-	// 	try {
-	// 		const res = await fetch(`http://localhost:3000/flowfactory/${id}`);
-	// 		const data = await res.json();
+	async function getPoses() {
+		try {
+			const res = await fetch(
+				`https://still-sands-89510.herokuapp.com/flowfactory/asana${id}`
+			);
+			const data = await res.json();
 
-	// 		setPose(data);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// }
+			setPose(data);
+		} catch (error) {
+			console.log(error);
+		}
+	}
 
 	return (
 		<div>
