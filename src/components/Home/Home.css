@@ -1,25 +1,25 @@
 body {
 	background: url(../../Assets/FlowersOpacity65.png) no-repeat;
 	background-size: cover;
-	height: 100vh;
-    /* background: rgba(210, 105, 121, 0.5); */
-	/* background-position
-    : bottom right; */
-	/* opacity: .25; */
-	
-	
+	height: 100vh;	
 }
-.Title {
-	font-size: 150px;
+.title {
+	font-size: 7em;
 	display: flex;
 	justify-content: center;
-	border: 1px solid black;
 }
 
-.hpLinks {
-	font-size: x-large;
+.homeNav {
 	display: flex;
+	justify-content: space-around;
 }
+
 li {
-    list-style-tynpmpe: none;
+    list-style: none;
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }

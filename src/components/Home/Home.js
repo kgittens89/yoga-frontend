@@ -1,20 +1,27 @@
 import React from 'react';
-import backgroundFlowers from "../../Assets/backgroundFlowers.jpg"
-import './Home.css'
-import { Link } from 'react-router-dom'
+import './Home.css';
+import { Link } from 'react-router-dom';
 
-function Home(props) {
+function Home() {
     return (
-        <section className='Title'>
-            The Flow Factory
-            <ul className='hpLinks'>
-                <li>All Poses</li>
-                <li>My Sequences</li>
-                <li>Pose of the Day</li>
-                <li>About</li>
-            </ul>
-        </section>
-    );
+			<section>
+				<h1 className='title'>The Flow Factory</h1>
+				<ul className='homeNav'>
+					<li>
+						<Link to='/poses'>All Poses</Link>
+					</li>
+					<li>
+						<Link to='/mySequence'>My Sequences</Link>
+					</li>
+					<li>
+						<Link to='/poseDetails'>Pose of the Day</Link>
+					</li>
+					<li>
+						<Link to='/about'>About</Link>
+					</li>
+				</ul>
+			</section>
+		);
 }
 
 export default Home;
