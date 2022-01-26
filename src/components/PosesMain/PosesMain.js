@@ -12,8 +12,12 @@ function PosesMain(props) {
 					return (
 						<Link to={`/poseDetails/${pose.id}`} key={pose.id}>
 							<div className='pose-card'>
-								<div className='card-image'> </div>
-								<div className='card-title'></div>
+								<div className='card-image'>
+									<img src={pose.image} alt={pose.englishName} />
+								</div>
+								<div className='card-title'>
+									<h3>{pose.englishName}</h3>
+								</div>
 							</div>
 						</Link>
 					);
