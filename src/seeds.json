@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "englishName": "Mountain Pose",
+        "sanskritName": "Tadasana",
+        "image": "https://cdn.vectorstock.com/i/1000x1000/38/30/woman-in-tadasana-or-mountain-yoga-pose-vector-28023830.webp",
+        "description": "",
+        "difficulty": "Easy",
+        "categories": [
+            {
+                "catName": "Standing",
+                "catDescription": "Standing Description",
+                "catId": 1
+            }
+        ] 
+    },
+    {
+        "id": 2,
+        "englishName": "Prayer Pose",
+        "sanskritName": "Pranamasana",
+        "image": "https://cdn.vectorstock.com/i/1000x1000/48/68/meditating-yogi-man-in-pranamasana-hatha-yoga-vector-38214868.webp",
+        "description": "Stand upright on your mat with your both feet closely aligned. Inhale deeply, expanding your chest and relaxing your shoulders.While you inhale, raise your arms from the sides. And as you exhale, join your palms together as if praying.",
+        "difficulty": "Easy",
+        "categories": [
+            {
+                "catName": "Standing",
+                "catDescription": "",
+                "catId": 1
+            }
+        ] 
+    },
+    {
+        "id": 3,
+        "englishName": "Raised Arms Pose",
+        "sanskritName": "Hasta Uttanasana",
+        "image": "https://blog.talkcharge.com/wp-content/uploads/2020/12/02-1.jpg",
+        "description": "Breathe in and lift your arms up and bend backwards slightly. Your biceps should lie close to your ears. This posture is to loosen up your body by stretching the entire body backwards.",
+        "difficulty": "Easy",
+
+        "categories": [
+            {
+                "catName": "Standing",
+                "catDescription": "",
+                "catId": 1
+            }
+        ] 
+    }
+]

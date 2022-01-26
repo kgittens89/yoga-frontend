@@ -19,15 +19,14 @@ function App() {
 			<main>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/poses' element={ <PosesMain /> } />
-					<Route path='/poseDetails' element={<PoseDetails />} />
+					<Route path='/poses' element={<PosesMain />} />
+					<Route path='/poseDetails/:id' element={<PoseDetails />} />
 					<Route path='/mySequence' element={<MySequenceDisplay />} />
 					<Route path='/about' element={<About />} />
 				</Routes>
 			</main>
 		</div>
-		);
-	}
-	
-	export default App;
-	
+	);
+}
+
+export default App;
