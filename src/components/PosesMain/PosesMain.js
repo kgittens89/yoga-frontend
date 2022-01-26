@@ -4,7 +4,19 @@ import axios from 'axios';
 import seeds from '../../seeds.json';
 
 function PosesMain(props) {
-	const [poses, setPoses] = useState(seeds);
+	const [poses, setPoses] = useState([]);
+	const url = `https://still-sands-89510.herokuapp.com/flowfactory/asana`;
+
+	useEffect(() => {
+		fetch(url)
+		.then((res) => res.json())
+		.then((json) => {
+			setPoses(json)
+		})
+		.catch(console.error);
+	}, []);
+
+	
 	return (
 		<div>
 			<h1>All Poses</h1>
