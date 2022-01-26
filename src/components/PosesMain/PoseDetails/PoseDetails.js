@@ -16,7 +16,7 @@ function PoseDetails(props) {
 	async function getPoses() {
 		try {
 			const res = await fetch(
-				`https://still-sands-89510.herokuapp.com/flowfactory/asana${id}`
+				`https://still-sands-89510.herokuapp.com/flowfactory/asana/${id}`
 			);
 			const data = await res.json();
 
