@@ -7,6 +7,7 @@ function PosesMain(props) {
 	const [poses, setPoses] = useState(seeds);
 	return (
 		<div>
+			<h1>All Poses</h1>
 			<section className='poses-container'>
 				{poses.map((pose) => {
 					return (
