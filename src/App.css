@@ -8,7 +8,7 @@
 }
 
 .navBar button {
-  position: absolute;
+  position: fixed;
   left: 40px;
   z-index: 50;
   cursor: pointer;
