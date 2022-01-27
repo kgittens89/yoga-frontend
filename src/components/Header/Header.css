@@ -1,0 +1,18 @@
+.header-box {
+	width: 100vw;
+	height: 10vh;
+	display: flex;
+	/* justify-self: flex-end; */
+	justify-content: flex-end;
+	/* align-self: flex-end; */
+}
+
+.header-text {
+	font-size: 30px;
+}
+
+.yogo-logo {
+	height: 60px;
+
+	margin-top: 1.8vh;
+}
