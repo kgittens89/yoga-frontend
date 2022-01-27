@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
-// import axios from 'axios';
 
 
 function PoseDetails(props) {
@@ -13,18 +12,20 @@ function PoseDetails(props) {
 	}, [id]);
 
 	async function getPoses() {
+		const url = `https://still-sands-89510.herokuapp.com/flowfactory/asana/${id}`;
+
 		try {
-			const res = await fetch(
-				`https://still-sands-89510.herokuapp.com/flowfactory/asana/${id}`
-			);
-			const data = await res.json();
-
-			setPose(data);
+		const res = await fetch(url);
+		const resJson = await res.json();
+			setPose(resJson)
 		} catch (error) {
-			console.log(error);
+			console.log(error)
 		}
-	}
+	};
 
+	if (!pose) {
+		return <p>Loading...</p>
+	}
 	return (
 		<div>
 			<h2>{pose.englishName}</h2>
@@ -32,12 +33,12 @@ function PoseDetails(props) {
 			<div className='details'>
 				<p>{pose.sanskritName}</p>
 				<p>{pose.difficulty}</p>
-				<p>{pose.discription}</p>
+				<p>{pose.description}</p>
 				<p>{pose.categories[0].catName}</p>
 				<p>{pose.categories[0].catDescription}</p>
 			</div>
 		</div>
-	);
-}
+	)
+};
 
 export default PoseDetails;

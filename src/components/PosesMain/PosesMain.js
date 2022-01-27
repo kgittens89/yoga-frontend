@@ -21,18 +21,18 @@ function PosesMain(props) {
 		<section className='poses-container'>
 		{poses.map((pose) => {
 			return (
-				<Link to={`/poseDetails/${pose.id}`} key={pose.id}>
-				<div className='pose-card'>
-				<div className='card-image'>
-				<img src={pose.image} alt={pose.englishName} />
-				</div>
-				<div className='card-title'>
-				<h3>{pose.englishName}</h3>
-				</div>
-				</div>
+				<Link to={`/poseDetails/${pose._id}`} key={pose.id}>
+					<div className='pose-card'>
+						<div className='card-image'>
+							<img src={pose.image} alt={pose.englishName} />
+						</div>
+						<div className='card-title'>
+							<h3>{pose.englishName}</h3>
+						</div>
+					</div>
 				</Link>
 				);
-			})}
+			})};
 			</section>
 			</div>
 			);
