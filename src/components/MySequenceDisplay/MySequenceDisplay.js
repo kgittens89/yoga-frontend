@@ -22,7 +22,12 @@ function MySequenceDisplay(props) {
 					<>
 						<h4>{sequence.sequenceName}</h4>
 						{sequence.sequencePoses.map((pose) => {
-							return <p key={pose.id}>{pose.englishName}</p>;
+							return (
+								<p key={pose.id}>
+									{pose.englishName}
+									{pose.image}
+								</p>
+							);
 						})}
 					</>
 				);
