@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Header from '../Header/Header';
+import '../Header/Header.css';
 
 function MySequenceDisplay(props) {
 	const [sequences, setSequences] = useState([]);
@@ -14,6 +16,7 @@ function MySequenceDisplay(props) {
 
 	return (
 		<div>
+			<Header />
 			{sequences.map((sequence) => {
 				return (
 					<>

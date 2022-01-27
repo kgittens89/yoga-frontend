@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
+import Header from '../../Header/Header';
 
 function PoseDetails(props) {
 	const [pose, setPose] = useState(null);
@@ -16,16 +17,16 @@ function PoseDetails(props) {
 		const url = `https://still-sands-89510.herokuapp.com/flowfactory/asana/${id}`;
 
 		try {
-		const res = await fetch(url);
-		const resJson = await res.json();
-			setPose(resJson)
+			const res = await fetch(url);
+			const resJson = await res.json();
+			setPose(resJson);
 		} catch (error) {
-			console.log(error)
+			console.log(error);
 		}
-	};
+	}
 
 	if (!pose) {
-		return <p>Loading...</p>
+		return <p>Loading...</p>;
 	}
 	return (
 		<div>
@@ -39,7 +40,7 @@ function PoseDetails(props) {
 				<p>{pose.categories[0].catDescription}</p>
 			</div>
 		</div>
-	)
-};
+	);
+}
 
 export default PoseDetails;
