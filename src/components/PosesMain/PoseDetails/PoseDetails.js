@@ -9,6 +9,7 @@ function PoseDetails(props) {
 
 	useEffect(() => {
 		getPoses();
+		//eslint-disable-next-line
 	}, [id]);
 
 	async function getPoses() {
