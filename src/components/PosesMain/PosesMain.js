@@ -15,6 +15,9 @@ function PosesMain(props) {
 		setPoses(resJson)
 	};
 	
+	if (!poses) {
+		return <p> Loading...</p>
+	}
 	return (
 		<div>
 		<h1>All Poses</h1>
