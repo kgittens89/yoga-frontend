@@ -1,11 +1,14 @@
+* {
+  font-family: 'Comfortaa', serif;
+}
+
 .navBar {
   position: relative;
 }
 
 .navBar button {
-  position: fixed;
+  position: absolute;
   left: 40px;
-  top: 40px;
   z-index: 10;
   cursor: pointer;
   background: transparent;
@@ -17,16 +20,72 @@
   list-style: none;
   position: fixed;
   top: 0;
-  background: darkcyan;
+  background: #E05D8D;
   left: 0;
   bottom: 0;
   height: 100vh;
   width: 0;
+  margin: 0px;
   overflow: hidden;
-  max-width: 290px;
-  z-index: 9;
+  max-width: 250px;
+  /* padding: 20px; */
 }
 
 .menuNav.showMenu {
   width: 100%;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.menuNav li:first-child {
+  margin-top: 5rem;
+}
+
+.posesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.poseCard {
+  border: 1px solid red;
+  border-radius: 5px;
+  display: grid;
+  max-width: 250px;
+  justify-content: center;
+  margin: 1em;
+}
+
+.cardImage {
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.cardTitle {
+  justify-self: center;
+  font-size: 12px;
+  overflow-wrap: normal;
+  margin: 5px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
