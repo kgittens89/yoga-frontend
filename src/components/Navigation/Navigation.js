@@ -29,7 +29,7 @@ function Navigation(props) {
 						<Link to='/'>Home</Link>
 					</li>
 					<li>
-						<Link to='/poses'>All Poses</Link>
+						<Link to='/posesMain'>All Poses</Link>
 					</li>
 					<li>
 						<Link to='/mysequence'>My Sequences</Link>

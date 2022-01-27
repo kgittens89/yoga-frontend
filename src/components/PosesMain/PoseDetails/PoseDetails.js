@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // import axios from 'axios';
 
-import seeds from '../../../seeds.json';
 
 function PoseDetails(props) {
 	const [pose, setPose] = useState(null);
