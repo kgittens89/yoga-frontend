@@ -29,12 +29,11 @@
   margin: 0px;
   overflow: hidden;
   max-width: 250px;
-  /* padding: 20px; */
+  padding: 20px;
+  width: 100%;
+  flex-direction: column;
 }
 
-.menuNav.showMenu {
-  width: 100%;
-}
 a {
   display: block;
   text-decoration: none;
