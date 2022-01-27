@@ -36,7 +36,6 @@ function PosesMain(props) {
 					);
 				})}
 			</section>
-			PosesMain
 		</div>
 	);
 }

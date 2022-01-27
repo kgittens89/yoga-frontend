@@ -8,7 +8,7 @@ function Home() {
             <h1 className='title'>The Flow Factory</h1>
             <ul className='homeNav'>
                 <li>
-                    <Link to='/poses'>All Poses</Link>
+                    <Link to='/posesMain'>All Poses</Link>
                 </li>
                 <li>
                     <Link to='/mySequence'>My Sequences</Link>

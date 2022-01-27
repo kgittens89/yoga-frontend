@@ -35,7 +35,7 @@ function Navigation(props) {
 						<Link to='/mysequence'>My Sequences</Link>
 					</li>
 					<li>
-						<Link to='/poseDetails'>Pose of the Day</Link>
+						<Link to='/poseDetails/:id'>Pose of the Day</Link>
 					</li>
 					<li>
 						<Link to='/about'>About</Link>
