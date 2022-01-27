@@ -1,47 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
+import MySequenceNav from '../MySequenceNav/MySequenceNav';
 
 function PosesMain(props) {
 	const [poses, setPoses] = useState([]);
-
+	const [ sequencePose, setSequencePose] = useState([])
+	
 	useEffect(() => {
 		getAsana();
 	}, []);
-
+	
+	const handleClick = (pose) => {
+		setSequencePose([...sequencePose, pose])
+	}
+	
 	async function getAsana() {
 		const url = `https://still-sands-89510.herokuapp.com/flowfactory/asana`;
 		const res = await fetch(url);
 		const resJson = await res.json();
 		setPoses(resJson);
 	}
-
+	
 	if (!poses) {
 		return <p> Loading...</p>;
 	}
 	return (
 		<div>
-			<Header />
-			<h1>All Poses</h1>
-			<section className='posesContainer'>
-				{poses.map((pose) => {
-					return (
-						<Link to={`/poseDetails/${pose._id}`} key={pose.id}>
-							<div className='poseCard'>
-								<div className='cardImage'>
-									<img src={pose.image} alt={pose.englishName} />
-								</div>
-								<div className='cardTitle'>
-									<h3>{pose.englishName}</h3>
-								</div>
-							</div>
-						</Link>
-					);
-				})}
-				;
+		<Header />
+		<h1>All Poses</h1>
+		<div className='main-poses'>
+				<MySequenceNav sequencePose={sequencePose} />
+		<section className='posesContainer'>
+		{poses.map((pose) => {
+			return (
+				<div className='poseCard'>
+					<button onClick={() => handleClick(pose)}>+</button>
+					<Link to={`/poseDetails/${pose._id}`} key={pose.id}>
+						<div className='cardImage'>
+							<img src={pose.image} alt={pose.englishName} />
+						</div>
+					</Link>
+					<div className='cardTitle'>
+						<h3>{pose.englishName}</h3>
+					</div>
+				</div>
+			);
+			})}
+			;
 			</section>
-		</div>
-	);
-}
-
-export default PosesMain;
+			</div>
+			</div>
+			);
+		}
+		
+		export default PosesMain;
+		
