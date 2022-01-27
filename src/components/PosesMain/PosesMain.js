@@ -18,15 +18,15 @@ function PosesMain(props) {
 	return (
 		<div>
 		<h1>All Poses</h1>
-		<section className='poses-container'>
+		<section className='posesContainer'>
 		{poses.map((pose) => {
 			return (
 				<Link to={`/poseDetails/${pose._id}`} key={pose.id}>
-					<div className='pose-card'>
-						<div className='card-image'>
+					<div className='poseCard'>
+						<div className='cardImage'>
 							<img src={pose.image} alt={pose.englishName} />
 						</div>
-						<div className='card-title'>
+						<div className='cardTitle'>
 							<h3>{pose.englishName}</h3>
 						</div>
 					</div>
