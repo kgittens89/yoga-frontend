@@ -1,0 +1,11 @@
+.teamCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+img {
+    border-radius: 50%;
+    max-width: 150px;
+    padding: 10px;
+}
