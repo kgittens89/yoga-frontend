@@ -28,7 +28,7 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 					return (
 						<div className='sequenceNavCard'>
 							<div>
-								<p id={pose._id}>{pose.englishName}</p>
+								<p className='sequencePoseName' id={pose._id}>{pose.englishName}</p>
 								<img
 									className='sequenceNavImg'
 									src={pose.image}
@@ -45,5 +45,3 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 }
 
 export default MySequenceNav;
-
-
