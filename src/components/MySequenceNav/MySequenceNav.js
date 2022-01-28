@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-function MySequenceNav({ sequencePose }) {
+function MySequenceNav({ sequencePose, setSequencePose }) {
 	const handleClick = () => {
 		const sequenceObj = sequencePose.map((pose) => {
 			return {
@@ -17,7 +17,8 @@ function MySequenceNav({ sequencePose }) {
 
 		const url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
 
-		axios.post(url, obj).then((err) => console.log(err));
+        axios.post(url, obj).then((err) => console.log(err));
+        setSequencePose([])
 	};
 
 	return (
@@ -44,3 +45,5 @@ function MySequenceNav({ sequencePose }) {
 }
 
 export default MySequenceNav;
+
+
