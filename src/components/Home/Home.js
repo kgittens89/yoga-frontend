@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import useFetchRandomPose from '../../hooks/useFetchRandomPose';
+import DarkYogaGirl from '../../Assets/DarkYogaGirl.png'
 
 function Home() {
     const idForRandomPose = useFetchRandomPose();
@@ -9,6 +10,7 @@ function Home() {
     return (
         <section>
             <h1 className='title'>The Flow Factory</h1>
+            <img className='homeGirl' src={DarkYogaGirl} alt="Yoga Meditation Logo" />
             <ul className='homeNav'>
                 <li>
                     <Link to='/posesMain'>All Poses</Link>

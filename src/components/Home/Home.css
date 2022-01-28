@@ -1,19 +1,23 @@
 
 .title {
 	font-size: 5em;
+	font-weight: normal;
 	display: flex;
 	justify-content: center;
-	padding-top: 50px;
+	padding-top: 20px;
+	margin-bottom: 10px;
 }
 
 .homeNav {
 	display: flex;
 	justify-content: space-around;
+	padding: 5px;
 }
 
 li {
     list-style: none;
 	font-size: 1.5em;
+	padding: 5px;
 }
 
 a {
@@ -25,4 +29,9 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100vh;	
+}
+
+.homeGirl {
+	width: 20%;
+
 }
