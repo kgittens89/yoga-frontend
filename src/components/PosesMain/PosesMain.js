@@ -54,7 +54,6 @@ function PosesMain(props) {
 							</div>
 						);
 					})}
-					;
 				</section>
 			</div>
 		</div>
