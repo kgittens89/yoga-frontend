@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
 import '../Header/Header.css';
 // import useNavigate from 'react-router-dom';
 
@@ -78,7 +78,7 @@ function MySequenceDisplay() {
 
 return (
 	<div>
-	<Header />
+	<Navigation />
 	{usersequences.map((sequence) => {
 		return (
 			<div className='user-sequence'>

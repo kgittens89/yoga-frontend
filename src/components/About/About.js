@@ -4,12 +4,12 @@ import MelissaHeadshot from '../../Assets/MelissaHeadshot.png';
 import MichaelHeadshot from '../../Assets/MichaelHeadshot.png';
 import SeanHeadshot from '../../Assets/SeanHeadshot.png';
 import './About.css';
-import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
 
 function About(props) {
 	return (
 		<div>
-			<Header />
+            <Navigation />
 			<h1 className='aboutTitle'>About</h1>
 			<p className='aboutUs'>
 				Developed by fellow software engineers desiring to make space in their

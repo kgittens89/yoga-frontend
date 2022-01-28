@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../Header/Header';
 import MySequenceNav from '../MySequenceNav/MySequenceNav';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import PoseByCategory from './PoseByCategory/PoseByCategory';
+import Navigation from '../Navigation/Navigation';
 
 function PosesMain(props) {
 	const [poses, setPoses] = useState([]);
@@ -28,8 +29,9 @@ function PosesMain(props) {
 	}
 	return (
 		<div>
-			<Header />
+			<Navigation />
 			<h1>All Poses</h1>
+			<PoseByCategory />
 			<div className='main-poses'>
 				<MySequenceNav sequencePose={sequencePose} setSequencePose={setSequencePose} />
 				<section className='posesContainer'>

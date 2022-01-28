@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
+import DarkYogaGirl from '../../Assets/DarkYogaGirl.png'
 import useFetchRandomPose from '../../hooks/useFetchRandomPose';
 // https://react-icons.github.io/react-icons/
 
@@ -14,6 +15,10 @@ function Navigation(props) {
 	};
 	return (
 		<nav className='navBar'>
+			<div className='header-box'>
+				<h1 className='header-text'>The Flow Factory</h1>
+				<img className='yogo-logo' src={DarkYogaGirl} alt='Logo' />
+			</div>
 			<button onClick={handleToggle}>
 				{navbarOpen ? (
 					<MdClose style={{ color: '#fff', width: '40px', height: '40px ' }} />

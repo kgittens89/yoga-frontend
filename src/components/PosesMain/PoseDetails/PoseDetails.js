@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import Header from '../../Header/Header';
+import Navigation from '../../Navigation/Navigation';
 
 function PoseDetails(props) {
 	const [pose, setPose] = useState(null);
@@ -30,6 +30,7 @@ function PoseDetails(props) {
 	}
 	return (
 		<div>
+			<Navigation />
 			<h2>{pose.englishName}</h2>
 			<img src={pose.image} alt={pose.englishName} />
 			<div className='details'>
