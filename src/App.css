@@ -14,7 +14,6 @@
 .navBar button {
   position: relative;
   left: 40px;
-  /* z-index: 50; */
   cursor: pointer;
   background: transparent;
   border: 1px solid red;
@@ -126,6 +125,7 @@ h1 {
 }
 .addPoseBtn :hover {
   color: rgb(255, 96, 123);
+  cursor: pointer;
 }
 .addPoseBtn {
   border: none;
