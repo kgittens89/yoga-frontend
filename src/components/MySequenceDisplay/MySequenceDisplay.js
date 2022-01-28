@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
+import Sequences from './Sequences';
 import '../Header/Header.css';
 // import useNavigate from 'react-router-dom';
 
@@ -9,7 +10,7 @@ function MySequenceDisplay() {
 	const [sequenceToEdit, setSequenceToEdit] = useState([]);
 	const [editToggle, setEditToggle] = useState(false);
 	// const [stateToggle, setStateToggle] = useState(false);
-	
+	const [currentEdit, setCurrentEdit] = useState();
 	// const navigate = useNavigate();
 	
 	useEffect(() => {
@@ -17,20 +18,21 @@ function MySequenceDisplay() {
 	}, [usersequences, setUserSequences]);
 
 	const getSequences = () => {
-	let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
+		let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
 
-	fetch(url)
-		.then((res) => res.json())
-		.then((res) => {
-			setUserSequences(res);
-		});
+		fetch(url)
+			.then((res) => res.json())
+			.then((res) => {
+				setUserSequences(res);
+			});
 	}
 	
-	const handleEditClick = (sequence) => {
+	const handleEditClick = (sequence, index) => {
 		// sequence.sequencePoses.forEach((pose) => {
 		// 	console.log(pose)
 		// }) Want to add class to each of the 'pose' elements in the forEach that will add ' on' class and display 'x' button 
-		
+		console.log(index)
+		setCurrentEdit(index)
 		setSequenceToEdit([])
 		setSequenceToEdit([sequence])
 		setEditToggle(!editToggle)
@@ -46,7 +48,6 @@ function MySequenceDisplay() {
 		
 		// tempArr.splice(idxToDelete, 1)
 		// console.log(tempArr)
-		
 		
 		let tempArr = [...sequenceToEdit];
 		console.log(tempArr)
@@ -70,40 +71,29 @@ function MySequenceDisplay() {
 			.catch((err) => console.log(err));
 		getSequences();
 	
-	// navigate('/mySequence')
-	// setSequenceToEdit(tempArr)
-	// console.log(sequenceToEdit)
+		// navigate('/mySequence')
+		// setSequenceToEdit(tempArr)
+		// console.log(sequenceToEdit)
 	
-}
+	}
 
-return (
-	<div>
-	<Navigation />
-	{usersequences.map((sequence) => {
-		return (
-			<div className='user-sequence'>
-			<h4>{sequence.sequenceName}</h4>
-			{sequence.sequencePoses.map((pose) => {
+	return (
+		<div>
+			<Navigation />
+			{usersequences.map((sequence, index) => {
 				return (
-					<div className='image-edit'>
-					<p key={pose.id}>{pose.englishName}</p>
-					
-					<img src={pose.image} alt={pose.englishName} className='image-sequence' />
-					{editToggle ? (
-						<button onClick={() => deleteClick(pose)}>x</button>
-						) : (
-							''
-							)}
-							</div>
-							);
-						})}
-						<button onClick={ () => handleEditClick(sequence) }>Edit</button>
-						</div>
-						);
-					})}
-					</div>
-					);
-				}
-				
+				<Sequences
+					sequence={sequence}
+					index={index}
+					currentEdit={currentEdit}
+					editToggle={editToggle}
+					handleEditClick={handleEditClick}
+					deleteClick={deleteClick}
+					/>
+				)
+			})}
+			</div>
+	)
+}
 				export default MySequenceDisplay;
 				
