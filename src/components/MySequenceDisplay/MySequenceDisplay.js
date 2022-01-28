@@ -4,23 +4,27 @@ import Header from '../Header/Header';
 import '../Header/Header.css';
 // import useNavigate from 'react-router-dom';
 
-function MySequenceDisplay(props) {
+function MySequenceDisplay() {
 	const [usersequences, setUserSequences] = useState([]);
 	const [sequenceToEdit, setSequenceToEdit] = useState([]);
 	const [editToggle, setEditToggle] = useState(false);
-	const [stateToggle, setStateToggle] = useState(false);
+	// const [stateToggle, setStateToggle] = useState(false);
 	
 	// const navigate = useNavigate();
 	
 	useEffect(() => {
-		let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
-		
-		fetch(url)
+		getSequences();
+	}, [usersequences, setUserSequences]);
+
+	const getSequences = () => {
+	let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
+
+	fetch(url)
 		.then((res) => res.json())
 		.then((res) => {
 			setUserSequences(res);
 		});
-	}, []);
+	}
 	
 	const handleEditClick = (sequence) => {
 		// sequence.sequencePoses.forEach((pose) => {
@@ -45,6 +49,7 @@ function MySequenceDisplay(props) {
 		
 		
 		let tempArr = [...sequenceToEdit];
+		console.log(tempArr)
 
 		let tempArrPoses = tempArr[0].sequencePoses
 			
@@ -55,15 +60,15 @@ function MySequenceDisplay(props) {
 		
 		tempArrPoses.splice(idxToDelete, 1);
 		console.log(tempArr);
-		
+		console.log(pose._id)
 		
 		axios
 			.put(
-				`https://still-sands-89510.herokuapp.com/flowfactory/sequence/${pose._id}`,
-				tempArr
+				`https://still-sands-89510.herokuapp.com/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
 			)
 			.then((res) => console.log(res))
 			.catch((err) => console.log(err));
+		getSequences();
 	
 	// navigate('/mySequence')
 	// setSequenceToEdit(tempArr)
@@ -83,7 +88,7 @@ return (
 					<div className='image-edit'>
 					<p key={pose.id}>{pose.englishName}</p>
 					
-					<img src={pose.image} alt={pose.englishName} />
+					<img src={pose.image} alt={pose.englishName} className='image-sequence' />
 					{editToggle ? (
 						<button onClick={() => deleteClick(pose)}>x</button>
 						) : (

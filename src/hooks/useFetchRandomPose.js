@@ -28,9 +28,9 @@ function useFetchRandomPose() {
 
         setPose( poseObj );
 
-        let randomPathId = await pose[0]._id
+        // let randomPathId = await pose[0]._id
 
-        setRandomId(randomPathId)
+        // setRandomId(randomPathId)
     }
     
     

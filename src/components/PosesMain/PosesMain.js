@@ -31,7 +31,7 @@ function PosesMain(props) {
 			<Header />
 			<h1>All Poses</h1>
 			<div className='main-poses'>
-				<MySequenceNav sequencePose={sequencePose} />
+				<MySequenceNav sequencePose={sequencePose} setSequencePose={setSequencePose} />
 				<section className='posesContainer'>
 					{poses.map((pose) => {
 						return (

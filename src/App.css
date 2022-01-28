@@ -140,12 +140,15 @@ h1 {
 	margin: 0px;
 }
 .poseName {
-	margin: 0px;
-	flex-wrap: wrap;
-	align-self: center;
+  margin: 0px;
+  flex-wrap: wrap;
+  align-self: center;
 }
-.sequencePoseName {
-	width: 90%;
-	word-wrap: normal;
-	margin: 5%;
+
+.user-sequence {
+  display: flex;
+}
+
+.image-sequence {
+  height: 50px;
 }

@@ -1,8 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 
 function MySequenceNav({ sequencePose, setSequencePose }) {
-	const handleClick = () => {
+	// const navigate = useNavigate();
+
+	const handleSaveClick = () => {
 		const sequenceObj = sequencePose.map((pose) => {
 			return {
 				englishName: pose.englishName,
@@ -18,7 +21,8 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		const url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
 
         axios.post(url, obj).then((err) => console.log(err));
-        setSequencePose([])
+		setSequencePose([])
+		// navigate('/mySequence');
 	};
 
 	return (
@@ -38,7 +42,7 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 						</div>
 					);
 				})}
-				<button className='saveSequence' onClick={handleClick}>Save Sequence</button>
+				<button className='saveSequence' onClick={handleSaveClick}>Save Sequence</button>
 			</div>
 		</>
 	);
