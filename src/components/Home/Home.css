@@ -1,9 +1,11 @@
 
 .title {
 	font-size: 5em;
+	font-weight: normal;
 	display: flex;
 	justify-content: center;
 	padding-top: 50px;
+	margin-bottom: 10px;
 }
 
 .homeNav {
