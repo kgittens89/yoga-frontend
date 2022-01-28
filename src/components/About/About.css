@@ -4,8 +4,27 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-img {
+.headshotImg {
     border-radius: 50%;
     max-width: 150px;
+    padding: 10px;
+}
+.aboutUs {
+    text-align: left;
+    padding: 0% 15% 2% 15%;
+}
+.linkedIn {
+    padding: 0px;
+}
+h4 {
+    font-weight: bold;
+    margin: 5px;
+}
+.teamTitle {
+    padding: 0px;
+    margin: 5px;
+}
+.aboutTitle {
+    margin: 5px;
     padding: 10px;
 }

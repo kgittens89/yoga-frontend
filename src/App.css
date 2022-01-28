@@ -5,16 +5,20 @@
 }
 
 .navBar {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
+  border: 1px solid red;
 }
 
 .navBar button {
-  position: fixed;
+  position: relative;
   left: 40px;
-  z-index: 50;
+  /* z-index: 50; */
   cursor: pointer;
   background: transparent;
-  border: none;
+  border: 1px solid red;
+  margin: 10px 45px 0px 0px;
 }
 
 .menuNav {
@@ -33,12 +37,8 @@
   padding: 20px;
   width: 100%;
   flex-direction: column;
-}
-
-.main-poses {
-  /* display: flex; */
-  /* display: grid;
-  grid-area: ; */
+  align-items: flex-end;
+  border: 5px solid black;
 }
 
 a {
@@ -49,6 +49,7 @@ a {
   font-weight: bold;
   font-size: large;
   padding-top: 10px;
+
 }
 
 .menuNav li:first-child {
@@ -57,22 +58,24 @@ a {
 
 .posesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, 1fr);
   grid-gap: 10px;
   margin: 10px;
+  margin-left: 22%;
 }
 
 .poseCard {
-  border: 1px solid red;
   border-radius: 5px;
   display: grid;
   max-width: 250px;
   justify-content: center;
-  margin: 1em;
+  margin: .5em;
+  background: #F5EEEA;
 }
 
 .cardImage {
+  height: 175px;
   align-items: center;
   display: flex;
   max-width: 100%;
@@ -81,18 +84,56 @@ a {
 .cardImage img {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 5%;
 }
 
 .cardTitle {
-  justify-self: center;
-  font-size: 12px;
+  display: flex;
+  font-size: 14px;
   overflow-wrap: normal;
-  margin: 5px;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: space-between;
+  width: 95%;
 }
 
 h1 {
   display: flex;
   justify-content: center;
   padding: 15px;
+}
+
+.sequenceNavImg {
+  height: 75px;
+  width: 75px;
+  border-radius: 10vh;
+}
+
+.sequenceNavGrid {
+  position: absolute;
+  margin-left: 2%;
+}
+
+.saveSequence {
+  background-color: rgb(255, 233, 237);
+  border-radius: 5px;
+  padding: 4px 6px;
+  margin-top: 15px;
+}
+
+.addBtn {
+  color: (85, 85, 85);
+}
+.addPoseBtn :hover {
+  color: rgb(255, 96, 123);
+}
+.addPoseBtn {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+.poseName {
+  margin: 0px;
+  flex-wrap: wrap;
+  align-self: center;
 }

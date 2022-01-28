@@ -10,7 +10,7 @@ function Home() {
     return (
         <section>
             <h1 className='title'>The Flow Factory</h1>
-            <img src={DarkYogaGirl} alt="Yoga Meditation Logo" />
+            <img className='homeGirl' src={DarkYogaGirl} alt="Yoga Meditation Logo" />
             <ul className='homeNav'>
                 <li>
                     <Link to='/posesMain'>All Poses</Link>
