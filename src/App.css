@@ -8,8 +8,9 @@
 } */
 .navBar {
 	display: flex;
-	justify-content: flex-end;
-	position: relative;
+	justify-content: space-between;
+	/* position: relative; */
+	border: 1px solid rgb(255, 96, 123);
 }
 
 .navBar button {
@@ -17,8 +18,8 @@
 	left: 40px;
 	cursor: pointer;
 	background: transparent;
-	margin: 10px 45px 0px 0px;
-  border: none;
+	margin: 10px 40px 0px 0px;
+	border: none;
 }
 
 .menuNav {
@@ -38,7 +39,7 @@
 	width: 100%;
 	flex-direction: column;
 	align-items: flex-end;
-  z-index: 50;
+	z-index: 50;
 }
 
 a {
@@ -139,7 +140,7 @@ h1 {
 	margin: 0px;
 }
 .poseName {
-  margin: 0px;
-  flex-wrap: wrap;
-  align-self: center;
+	margin: 0px;
+	flex-wrap: wrap;
+	align-self: center;
 }

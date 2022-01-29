@@ -6,10 +6,14 @@
 	justify-content: flex-start;
 	/* align-self: flex-end; */
 	position: relative;
+	border: 1px solid black;
 }
 
 .header-text {
-	font-size: 30px;
+	font-size: 28px;
+
+	color: #383838;
+	word-wrap: none;
 }
 
 .yogo-logo {

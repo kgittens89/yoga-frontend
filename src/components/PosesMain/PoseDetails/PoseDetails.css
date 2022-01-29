@@ -39,7 +39,7 @@ p {
 	font-weight: bold;
 	/* color: #a70741; */
 	background-color: #f39bbb;
-	flex-shrink: 2;
+	/* flex-shrink: 2; */
 	justify-items: flex-start;
 	padding: 4%;
 }
