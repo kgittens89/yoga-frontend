@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function MySequenceNav({ sequencePose, setSequencePose }) {
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 	const [sequenceName, setSequenceName] = useState();
 
 	const handleSaveClick = () => {
@@ -15,15 +15,17 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		});
 
 		const obj = {
-			sequenceName: `${sequenceName}`,
+			sequenceName: (sequenceName ? `${sequenceName}` : 'User Sequence'),
 			sequencePoses: sequenceObj,
 		};
 
 		const url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
 
-        axios.post(url, obj).then((err) => console.log(err));
+		axios.post(url, obj)
+			.then((err) => console.log(err));
 		setSequencePose([])
-		// navigate('/mySequence');
+		navigate('/mysequence');
+		// Try to add logic to navigate to new sequenceDetails page. Was considering grabbing the res._id from return. I believe that the backend is returning the newly created sequence when posted ??
 	};
 
 	const handleChange = (e) => {
