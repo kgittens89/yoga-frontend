@@ -143,11 +143,3 @@ h1 {
   flex-wrap: wrap;
   align-self: center;
 }
-
-.user-sequence {
-  display: flex;
-}
-
-.image-sequence {
-  height: 50px;
-}

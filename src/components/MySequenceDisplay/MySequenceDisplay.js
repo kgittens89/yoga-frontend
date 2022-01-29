@@ -22,8 +22,8 @@ function MySequenceDisplay() {
 			.then((res) => {
 				setUserSequences(res);
 			});
-	}
-	
+	};
+
 	const handleEditClick = (sequence, index) => {
 		setCurrentEdit(index)
 		setSequenceToEdit([])
@@ -53,21 +53,22 @@ function MySequenceDisplay() {
 	return (
 		<div>
 			<Navigation />
-			{usersequences.map((sequence, index) => {
-				return (
-				<Sequences
-					sequence={sequence}
-					index={index}
-					currentEdit={currentEdit}
-					editToggle={editToggle}
-					handleEditClick={handleEditClick}
-					deleteClick={deleteClick}
-					/>
-				)
-			})}
+			<h1>My Sequences</h1>
+			<div className='sequenceContainer'>
+				{usersequences.map((sequence, index) => {
+					return (
+						<Sequences
+							sequence={sequence}
+							index={index}
+							currentEdit={currentEdit}
+							editToggle={editToggle}
+							handleEditClick={handleEditClick}
+							deleteClick={deleteClick}
+						/>
+					);
+				})}
+			</div>
 		</div>
-	)
+	);
 }
-				
 export default MySequenceDisplay;
-				

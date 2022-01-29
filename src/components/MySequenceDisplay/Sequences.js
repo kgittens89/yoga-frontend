@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './MySequenceDisplay.css';
+import {AiOutlineCloseCircle} from 'react-icons/ai'
 
 function SequenceDetails({
 	sequence,
@@ -10,32 +12,31 @@ function SequenceDetails({
 	deleteClick,
 }) {
 	return (
-		<div className='user-sequence'>
-			<Link to={`/sequenceDetails/${sequence._id}`}>
+		<div className='userSequence'>
+			<Link className='sequenceName' to={`/sequenceDetails/${sequence._id}`}>
 				{' '}
 				<h4>{sequence.sequenceName}</h4>
 			</Link>
 			{sequence.sequencePoses.map((pose) => {
 				return (
-					<div className='image-edit'>
+					<div className='imageEdit'>
 						<p key={pose.id}>{pose.englishName}</p>
-
-						<img
+						{/* <img
 							src={pose.image}
 							alt={pose.englishName}
-							className='image-sequence'
-						/>
+							className='imageSequence'
+						/> */}
 						{index === currentEdit && editToggle ? (
-							<button onClick={() => deleteClick(pose)}>x</button>
+							<button onClick={() => deleteClick(pose)}><AiOutlineCloseCircle size={20}/></button>
 						) : (
 							''
 						)}
 					</div>
 				);
 			})}
-			<button onClick={() => handleEditClick(sequence, index)}>Edit</button>
+			<button className='editBtn' onClick={() => handleEditClick(sequence, index)}>Edit</button>
 		</div>
 	);
 }
-            
-            export default SequenceDetails;
+
+export default SequenceDetails;
