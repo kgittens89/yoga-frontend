@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../../Navigation/Navigation';
 
+import '../PoseDetails/PoseDetails.css';
+
 function PoseDetails(props) {
 	const [pose, setPose] = useState(null);
 	const { id } = useParams();
@@ -29,14 +31,16 @@ function PoseDetails(props) {
 	return (
 		<div>
 			<Navigation />
-			<h2>{pose.englishName}</h2>
-			<img src={pose.image} alt={pose.englishName} />
-			<div className='details'>
-				<p>{pose.sanskritName}</p>
-				<p>{pose.difficulty}</p>
-				<p>{pose.description}</p>
-				<p>{pose.categories[0].catName}</p>
-				<p>{pose.categories[0].catDescription}</p>
+			<h2 className='english'>{pose.englishName}</h2>
+			<div className='container'>
+				<img className='img' src={pose.image} alt={pose.englishName} />
+				<div className='details'>
+					<p className='sans'>{pose.sanskritName}</p>
+					<p className='level'>{pose.difficulty}</p>
+					<p>{pose.description}</p>
+					<p>{pose.categories[0].catName}</p>
+					<p>{pose.categories[0].catDescription}</p>
+				</div>
 			</div>
 		</div>
 	);

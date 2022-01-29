@@ -1,0 +1,30 @@
+.container {
+	display: flex;
+}
+.english {
+	font-size: xx-large;
+	font-weight: bolder;
+	color: #a70741;
+	justify-items: center;
+}
+
+.img {
+	display: flex;
+	align-items: right;
+	justify-content: flex-end;
+	max-width: 50%;
+	max-height: auto;
+}
+
+.details {
+	font-size: large;
+	font-weight: bold;
+	color: #a70741;
+	flex-shrink: 2;
+	justify-items: flex-start;
+}
+
+/* 
+.sans
+
+.level */
