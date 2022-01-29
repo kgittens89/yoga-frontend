@@ -20,7 +20,6 @@ function Home() {
                 </li>
                 <li>
                     <Link to={`/poseDetails/${idForRandomPose}`}>Pose of the Day</Link> 
-                    {/* Pose of the Day only works on initial click, Not sure why?? */}
                 </li>
                 <li>
                     <Link to='/about'>About</Link>

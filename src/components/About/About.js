@@ -9,7 +9,7 @@ import Navigation from '../Navigation/Navigation';
 function About(props) {
 	return (
 		<div>
-            <Navigation />
+			<Navigation />
 			<h1 className='aboutTitle'>About</h1>
 			<p className='aboutUs'>
 				Developed by fellow software engineers desiring to make space in their
@@ -31,6 +31,8 @@ function About(props) {
 				<div>
 					<a
 						className='linkedIn'
+						target='_blank'
+						rel='noreferrer'
 						href='https://www.linkedin.com/in/keisha-gittens/'>
 						<img className='headshotImg' src={KeishaHeadshot} alt='Keisha' />
 					</a>
@@ -39,6 +41,8 @@ function About(props) {
 				<div>
 					<a
 						className='linkedIn'
+						target='_blank'
+						rel='noreferrer'
 						href='https://www.linkedin.com/in/melissa-morgan/'>
 						<img className='headshotImg' src={MelissaHeadshot} alt='Melissa' />
 					</a>
@@ -47,6 +51,8 @@ function About(props) {
 				<div>
 					<a
 						className='linkedIn'
+						target='_blank'
+						rel='noreferrer'
 						href='https://www.linkedin.com/in/michaelmyatt/'>
 						<img className='headshotImg' src={MichaelHeadshot} alt='Michael' />
 					</a>
@@ -55,6 +61,8 @@ function About(props) {
 				<div>
 					<a
 						className='linkedIn'
+						target='_blank'
+						rel='noreferrer'
 						href='https://www.linkedin.com/in/sean-travis-porter/'>
 						<img className='headshotImg' src={SeanHeadshot} alt='Sean' />
 					</a>

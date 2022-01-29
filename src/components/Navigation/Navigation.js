@@ -38,7 +38,6 @@ function Navigation(props) {
 				</li>
 				<li>
 					<Link to={`/poseDetails/${idForRandomPose}`}>Pose of the Day</Link>
-					{/* Again Pose of the day is acting a little weird. Doesn't always switch out. */}
 				</li>
 				<li>
 					<Link to='/about'>About</Link>
