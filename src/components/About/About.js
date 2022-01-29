@@ -1,10 +1,11 @@
 import React from 'react';
+import Navigation from '../Navigation/Navigation';
+import './About.css';
+
 import KeishaHeadshot from '../../Assets/KeishaHeadshot.png';
 import MelissaHeadshot from '../../Assets/MelissaHeadshot.png';
 import MichaelHeadshot from '../../Assets/MichaelHeadshot.png';
 import SeanHeadshot from '../../Assets/SeanHeadshot.png';
-import './About.css';
-import Navigation from '../Navigation/Navigation';
 
 function About(props) {
 	return (

@@ -1,7 +1,8 @@
 import React from 'react';
-import './Home.css';
 import { Link } from 'react-router-dom';
+
 import useFetchRandomPose from '../../hooks/useFetchRandomPose';
+import './Home.css';
 import DarkYogaGirl from '../../Assets/DarkYogaGirl.png'
 
 function Home() {
@@ -19,7 +20,7 @@ function Home() {
                     <Link to='/mySequence'>My Sequences</Link>
                 </li>
                 <li>
-                    <Link to={`/poseDetails/${idForRandomPose}`}>Pose of the Day</Link> 
+                    <Link to={`/poseDetails/${idForRandomPose}`}>Random Pose</Link> 
                 </li>
                 <li>
                     <Link to='/about'>About</Link>

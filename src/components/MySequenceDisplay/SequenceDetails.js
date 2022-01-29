@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom'
 
 function SequenceDetails(props) {
-    const [ sequence, setSequence ] = useState(null)
+    const [sequence, setSequence] = useState(null);
     const { sequenceId } = useParams();
     
     useEffect(() => {
@@ -38,6 +38,6 @@ function SequenceDetails(props) {
             })}
             </div>
             );
-        }
+};
         
         export default SequenceDetails;

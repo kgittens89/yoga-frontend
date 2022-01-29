@@ -5,12 +5,12 @@ import { Routes, Route } from 'react-router-dom';
 import About from './components/About/About';
 import Home from './components/Home/Home';
 import MySequenceDisplay from './components/MySequenceDisplay/MySequenceDisplay';
+import PoseByCategory from './components/PosesMain/PoseByCategory/PoseByCategory';
 import PosesMain from './components/PosesMain/PosesMain';
 import PoseDetails from './components/PosesMain/PoseDetails/PoseDetails';
 import SequenceDetails from './components/MySequenceDisplay/SequenceDetails';
 
 import './App.css';
-import PoseByCategory from './components/PosesMain/PoseByCategory/PoseByCategory';
 
 function App() {
 	return (

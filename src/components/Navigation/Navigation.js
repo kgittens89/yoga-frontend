@@ -8,11 +8,12 @@ import useFetchRandomPose from '../../hooks/useFetchRandomPose';
 
 function Navigation(props) {
 	const [navbarOpen, setNavbarOpen] = useState(false);
-	  const idForRandomPose = useFetchRandomPose();
+	const idForRandomPose = useFetchRandomPose();
 
 	const handleToggle = () => {
 		setNavbarOpen(!navbarOpen);
 	};
+	
 	return (
 		<nav className='navBar'>
 			<div className='header-box'>
@@ -37,7 +38,7 @@ function Navigation(props) {
 					<Link to='/mysequence'>My Sequences</Link>
 				</li>
 				<li>
-					<Link to={`/poseDetails/${idForRandomPose}`}>Pose of the Day</Link>
+					<Link to={`/poseDetails/${idForRandomPose}`}>Random Pose</Link>
 				</li>
 				<li>
 					<Link to='/about'>About</Link>
