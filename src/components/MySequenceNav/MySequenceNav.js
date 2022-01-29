@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 // import { useNavigate } from 'react-router-dom';
 
 function MySequenceNav({ sequencePose, setSequencePose }) {
 	// const navigate = useNavigate();
+	const [sequenceName, setSequenceName] = useState();
 
 	const handleSaveClick = () => {
 		const sequenceObj = sequencePose.map((pose) => {
@@ -14,7 +15,7 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		});
 
 		const obj = {
-			sequenceName: 'User Sequence',
+			sequenceName: `${sequenceName}`,
 			sequencePoses: sequenceObj,
 		};
 
@@ -25,9 +26,19 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		// navigate('/mySequence');
 	};
 
+	const handleChange = (e) => {
+		setSequenceName(e.target.value)
+	}
+
 	return (
 		<>
 			<div className='sequenceNavGrid'>
+				{sequencePose.length >= 1 ? <input
+					type='text'
+					placeholder='Sequence Name'
+					value={sequenceName}
+					onChange={handleChange}
+				/> : ''}
 				{sequencePose.map((pose) => {
 					return (
 						<div className='sequenceNavCard'>
