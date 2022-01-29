@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './MySequenceDisplay.css';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import useCollapse from 'react-collapsed';
+//https://blog.logrocket.com/create-collapsible-react-components-react-collapsed/
 
 function SequenceDetails({
 	sequence,
@@ -23,7 +24,7 @@ function SequenceDetails({
 			</Link>
 			<div className='collapsible'>
 				<div className='collapsibleHeader' {...getToggleProps()}>
-					{isExpanded ? 'Hide Poses' : 'See Poses'}
+					{isExpanded ? 'Hide Pose List' : 'Show Pose List'}
 				</div>
 				<div {...getCollapseProps()}>
 					<div className='content'>

@@ -1,10 +1,11 @@
 .userSequence {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid rgb(70, 70, 70);
-  border-radius: 20px;
-  align-items: center;
-  margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 20px;
+    align-items: center;
+    margin: 10px;
+    background:rgb(255, 233, 237);
 }
 
 .imageSequence {
@@ -15,7 +16,7 @@
     display: grid;
     margin: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: minmax(200px, 1fr);
+    grid-auto-rows: auto;
 }
 
 .poseList {
@@ -32,10 +33,16 @@
 .imageEdit {
     border: 1px solid purple;
     width: 175px;
+
 }
 .sequenceName :hover{
     text-decoration: underline;
 }
 .sequenceName {
-    padding-top: 20px;
+    padding: 20px 10px 5px 10px;
+}
+.collapsibleHeader {
+    font-style: italic;
+    padding: 5px 0px 10px 0px;
+    cursor: pointer;
 }

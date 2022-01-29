@@ -64,6 +64,7 @@ function MySequenceDisplay() {
 							editToggle={editToggle}
 							handleEditClick={handleEditClick}
 							deleteClick={deleteClick}
+							key={index}
 						/>
 					);
 				})}
