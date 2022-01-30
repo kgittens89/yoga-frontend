@@ -31,7 +31,7 @@ function Navigation(props) {
 						/>
 					) : (
 						<FiMenu
-							style={{ color: '#575757', width: '40px', height: '40px' }}
+							style={{ color: '#383838', width: '40px', height: '40px' }}
 						/>
 					)}
 				</button>

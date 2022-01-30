@@ -6,6 +6,7 @@
 	justify-content: center;
 	padding-top: 20px;
 	margin-bottom: 10px;
+	color: #383838;
 }
 
 .homeNav {
@@ -20,6 +21,7 @@ li {
 	list-style: none;
 	font-size: 1.6em;
 	padding: 4%;
+	text-transform: uppercase;
 }
 
 a {

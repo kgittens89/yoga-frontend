@@ -10,7 +10,6 @@ a {
 	display: block;
 	text-decoration: none;
 	color: #3c3c3c;
-	text-transform: uppercase;
 	font-weight: bold;
 	font-size: large;
 	padding-top: 10px;
@@ -19,7 +18,7 @@ a {
 h1 {
 	display: flex;
 	justify-content: center;
-	padding: 15px;
+	padding: 10px;
 }
 .whiteBk{
 	background: rgba(255, 255, 255, 0.701);
