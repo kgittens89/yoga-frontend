@@ -1,14 +1,16 @@
 // import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import '../MySequenceDisplay/SequenceDetails.css'
 import {AiOutlineEdit} from 'react-icons/ai'
+import axios from 'axios';
 
 function SequenceDetails(props) {
 	const [editToggle, setEditToggle] = useState(false);
 	const [sequence, setSequence] = useState(null);
 	const { sequenceId } = useParams();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		// const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
@@ -41,6 +43,14 @@ function SequenceDetails(props) {
 	const handleChange = (e) => {
 		setSequence({ ...sequence, sequenceName: e.target.value });
 	};
+
+	const handleDeleteSequence = () => {
+		const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/${sequenceId}`;
+
+		axios.delete(url)
+			.then(() => navigate('/mysequence'))
+		.catch(err => console.log(err))
+	}
 
 	const deleteClick = (pose) => {
 		console.log(pose);
@@ -81,7 +91,8 @@ function SequenceDetails(props) {
 					) : (
 						<h2>{sequence.sequenceName}</h2>
 					)}
-					<button className='editSeqDetailsBtn' onClick={handleEditClick}><AiOutlineEdit size={25}/></button>
+					<button className='editSeqDetailsBtn' onClick={handleEditClick}><AiOutlineEdit size={25} /></button>
+					{editToggle ? <button onClick={handleDeleteSequence}>Delete Sequence</button> : ''}
 
 				</div>
 				{sequence.sequencePoses.map((pose) => {
