@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
 import Sequences from './Sequences';
-import '../Header/Header.css';
 
 function MySequenceDisplay() {
 	const [usersequences, setUserSequences] = useState([]);
@@ -53,21 +52,23 @@ function MySequenceDisplay() {
 	return (
 		<div>
 			<Navigation />
-			<h1>My Sequences</h1>
-			<div className='sequenceContainer'>
-				{usersequences.map((sequence, index) => {
-					return (
-						<Sequences
-							sequence={sequence}
-							index={index}
-							currentEdit={currentEdit}
-							editToggle={editToggle}
-							handleEditClick={handleEditClick}
-							deleteClick={deleteClick}
-							key={index}
-						/>
-					);
-				})}
+			<div className='whiteBk'>
+				<h1 className='pageTitle'>My Sequences</h1>
+				<div className='sequenceContainer'>
+					{usersequences.map((sequence, index) => {
+						return (
+							<Sequences
+								sequence={sequence}
+								index={index}
+								currentEdit={currentEdit}
+								editToggle={editToggle}
+								handleEditClick={handleEditClick}
+								deleteClick={deleteClick}
+								key={index}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

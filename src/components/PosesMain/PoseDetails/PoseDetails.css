@@ -1,6 +1,7 @@
 .cardContainer {
-	border: 1px solid black;
-	margin: 8%;
+	/* border: 1px solid black; */
+	margin: 0% 8%;
+	padding: 8% 0%;
 }
 
 .container {

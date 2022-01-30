@@ -68,7 +68,7 @@ function SequenceDetails(props) {
 	return (
 		<div>
             <Navigation />
-			<div>
+			<div className='whiteBk'>
 				{editToggle ? (
 					<input
 						type='text'

@@ -1,5 +1,5 @@
 .header-box {
-	height: 12vh;
+	height: 10vh;
 	display: flex;
 	justify-content: flex-start;
     align-items: center;
@@ -10,6 +10,8 @@
 .header-text {
     font-size: max(1.25em, 20px);
 	color: #383838;
+	margin: 0px;
+	/* font-weight: bold; */
 }
 
 .yogo-logo {
@@ -27,7 +29,7 @@
 	left: 5%;
 	cursor: pointer;
 	background: transparent;
-	margin-right: 10px;
+	margin-right: 12px;
 	border: none;
     z-index: 51;
 }
@@ -37,7 +39,7 @@
 	list-style: none;
 	position: fixed;
 	top: 0;
-	background: #e05d8d;
+	background: #e46895;
 	right: 0;
 	bottom: 0;
 	height: 100vh;
@@ -51,6 +53,15 @@
 	align-items: flex-end;
 	z-index: 50;
 }
+
+.menuNav li:first-child {
+	margin-top: 4rem;
+}
+
+.navLink {
+	color: white;
+}
+
 .buttonDiv {
     width: 17%;
     display: flex;

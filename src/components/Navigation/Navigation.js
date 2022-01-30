@@ -37,19 +37,29 @@ function Navigation(props) {
 					style={{ display: navbarOpen ? 'flex' : 'none' }}
 					className='menuNav'>
 					<li>
-						<Link to='/'>Home</Link>
+						<Link className='navLink' to='/'>
+							Home
+						</Link>
 					</li>
 					<li>
-						<Link to='/posesMain'>All Poses</Link>
+						<Link className='navLink' to='/posesMain'>
+							All Poses
+						</Link>
 					</li>
 					<li>
-						<Link to='/mysequence'>My Sequences</Link>
+						<Link className='navLink' to='/mysequence'>
+							My Sequences
+						</Link>
 					</li>
 					<li>
-						<Link to={`/poseDetails/${idForRandomPose}`}>Random Pose</Link>
+						<Link className='navLink' to={`/poseDetails/${idForRandomPose}`}>
+							Random Pose
+						</Link>
 					</li>
 					<li>
-						<Link to='/about'>About</Link>
+						<Link className='navLink' to='/about'>
+							About
+						</Link>
 					</li>
 				</ul>
 			</div>
