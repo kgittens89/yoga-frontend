@@ -49,6 +49,9 @@ function MySequenceDisplay() {
 		getSequences();
 	}
 
+	if (!usersequences) {
+		return <p>Loading...</p>
+	}
 	return (
 		<div>
 			<Navigation />

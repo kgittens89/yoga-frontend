@@ -36,7 +36,7 @@ function PoseDetails(props) {
 				<div className='cardContainer'>
 					<h2 className='english'>{pose.englishName}</h2>
 					<p className='sans'>
-						Sanskrit Name: <p className='sName'>{pose.sanskritName}</p>
+						Sanskrit Name: <span className='sName'>{pose.sanskritName}</span>
 					</p>
 					<img className='img' src={pose.image} alt={pose.englishName} />
 					<div className='container'>
