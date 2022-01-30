@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import '../MySequenceDisplay/SequenceDetails.css'
+import {AiOutlineEdit} from 'react-icons/ai'
 
 function SequenceDetails(props) {
 	const [editToggle, setEditToggle] = useState(false);
@@ -67,7 +68,7 @@ function SequenceDetails(props) {
 	}
 	return (
 		<div>
-            <Navigation />
+			<Navigation />
 			<div className='whiteBk'>
 				{editToggle ? (
 					<input
@@ -78,7 +79,7 @@ function SequenceDetails(props) {
 				) : (
 					<h2>{sequence.sequenceName}</h2>
 				)}
-				<button onClick={handleEditClick}>Edit</button>
+				<button onClick={handleEditClick}><AiOutlineEdit size={25}/></button>
 				{sequence.sequencePoses.map((pose) => {
 					return (
 						<div className='sequenceDetailsBlock' key={pose._id}>
@@ -88,7 +89,7 @@ function SequenceDetails(props) {
 								className='imageSequence'
 							/>
 							<p>{pose.englishName}</p>
-                            <span>{pose.description}</span>
+							<span>{pose.description}</span>
 							{editToggle ? (
 								<button onClick={() => deleteClick(pose)}>x</button>
 							) : (

@@ -40,6 +40,7 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 					placeholder='Sequence Name'
 					value={sequenceName}
 					onChange={handleChange}
+					className='nameInput'
 				/> : ''}
 				{sequencePose.map((pose) => {
 					return (
@@ -55,7 +56,8 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 						</div>
 					);
 				})}
-				<button className='saveSequence' onClick={handleSaveClick}>Save Sequence</button>
+				{sequencePose.length >= 1 ? <button className='saveSequence' onClick={handleSaveClick}>Save Sequence</button> : <div className='preSequence'>Click the + next to any pose to start your sequence!</div>}
+				
 			</div>
 		</>
 	);
