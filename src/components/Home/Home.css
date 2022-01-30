@@ -1,6 +1,6 @@
 
 .title {
-	font-size: 5em;
+	font-size: 4.5em;
 	font-weight: normal;
 	display: flex;
 	justify-content: center;
@@ -10,14 +10,17 @@
 
 .homeNav {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 	padding: 5px;
+	margin-top: 5%;
 }
 
 li {
-    list-style: none;
-	font-size: 1.5em;
-	padding: 5px;
+	list-style: none;
+	font-size: 1.6em;
+	padding: 5%;
+	border: 1px solid red;
 }
 
 a {
@@ -33,5 +36,4 @@ body {
 
 .homeGirl {
 	width: 20%;
-
 }

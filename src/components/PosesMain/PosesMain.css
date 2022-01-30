@@ -1,0 +1,42 @@
+.posesContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	grid-auto-rows: minmax(200px, 1fr);
+	grid-gap: 10px;
+	margin: 10px;
+	margin-left: 28%;
+	margin-right: 5%;
+}
+
+.poseCard {
+	border-radius: 5px;
+	display: grid;
+	max-width: 250px;
+	justify-content: center;
+	margin: 0.5em;
+	background: #f5eeea;
+	width: auto;
+}
+
+.cardImage {
+	height: 175px;
+	align-items: center;
+	display: flex;
+	max-width: 100%;
+}
+
+.cardImage img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5%;
+}
+
+.cardTitle {
+	display: flex;
+	font-size: 14px;
+	overflow-wrap: normal;
+	flex-direction: row;
+	padding: 5px;
+	justify-content: space-between;
+	width: 95%;
+}

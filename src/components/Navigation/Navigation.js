@@ -4,6 +4,7 @@ import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 import DarkYogaGirl from '../../Assets/DarkYogaGirl.png';
 import useFetchRandomPose from '../../hooks/useFetchRandomPose';
+import '../Navigation/Navigation.css'
 // https://react-icons.github.io/react-icons/
 
 function Navigation(props) {
@@ -17,10 +18,10 @@ function Navigation(props) {
 	return (
 		<nav className='navBar'>
 			<div className='header-box'>
-				<h1 className='header-text'>The Flow Factory</h1>
 				<img className='yogo-logo' src={DarkYogaGirl} alt='Logo' />
+				<h1 className='header-text'>The Flow Factory</h1>
 			</div>
-			<div>
+			<div className='buttonDiv'>
 				<button onClick={handleToggle}>
 					{navbarOpen ? (
 						<MdClose
@@ -28,7 +29,7 @@ function Navigation(props) {
 						/>
 					) : (
 						<FiMenu
-							style={{ color: '#7b7b7b', width: '40px', height: '40px' }}
+							style={{ color: '#575757', width: '40px', height: '40px' }}
 						/>
 					)}
 				</button>

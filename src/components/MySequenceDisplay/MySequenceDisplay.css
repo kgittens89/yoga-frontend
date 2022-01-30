@@ -8,9 +8,9 @@
     background:rgb(255, 233, 237);
 }
 
-.imageSequence {
+/* .imageSequence {
   height: 60px;
-}
+} */
 
 .sequenceContainer {
     display: grid;

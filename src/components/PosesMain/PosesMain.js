@@ -4,6 +4,7 @@ import MySequenceNav from '../MySequenceNav/MySequenceNav';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import PoseByCategory from './PoseByCategory/PoseByCategory';
 import Navigation from '../Navigation/Navigation';
+import '../PosesMain/PosesMain.css';
 
 function PosesMain(props) {
 	const [poses, setPoses] = useState([]);

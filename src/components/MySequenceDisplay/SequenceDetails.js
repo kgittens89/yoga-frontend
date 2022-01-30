@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
+import '../MySequenceDisplay/SequenceDetails.css'
 
 function SequenceDetails(props) {
 	const [editToggle, setEditToggle] = useState(false);
@@ -66,34 +67,37 @@ function SequenceDetails(props) {
 	}
 	return (
 		<div>
-			{editToggle ? (
-				<input
-					type='text'
-					value={sequence.sequenceName}
-					onChange={handleChange}
-				/>
-			) : (
-				<h2>{sequence.sequenceName}</h2>
-			)}
-			<button onClick={handleEditClick}>Edit</button>
-			{sequence.sequencePoses.map((pose) => {
-				return (
-					<div key={pose._id}>
-						<p>{pose.englishName}</p>
-
-						<img
-							src={pose.image}
-							alt={pose.englishName}
-							className='image-sequence'
-						/>
-						{editToggle ? (
-							<button onClick={() => deleteClick(pose)}>x</button>
-						) : (
-							''
-						)}
-					</div>
-				);
-			})}
+            <Navigation />
+			<div>
+				{editToggle ? (
+					<input
+						type='text'
+						value={sequence.sequenceName}
+						onChange={handleChange}
+					/>
+				) : (
+					<h2>{sequence.sequenceName}</h2>
+				)}
+				<button onClick={handleEditClick}>Edit</button>
+				{sequence.sequencePoses.map((pose) => {
+					return (
+						<div className='sequenceDetailsBlock' key={pose._id}>
+							<img
+								src={pose.image}
+								alt={pose.englishName}
+								className='imageSequence'
+							/>
+							<p>{pose.englishName}</p>
+                            <span>{pose.description}</span>
+							{editToggle ? (
+								<button onClick={() => deleteClick(pose)}>x</button>
+							) : (
+								''
+							)}
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 }
