@@ -103,8 +103,11 @@ function SequenceDetails(props) {
 								alt={pose.englishName}
 								className='imageSequence'
 							/>
-							<p>{pose.englishName}</p>
-							<span>{pose.description}</span>
+							<div className='seqPoseNameBlock'>
+								<div className='seqEnglishName'>{pose.englishName}</div>
+								<div className='seqSanskritName'>{pose.sanskritName}</div>
+								<p className='seqPoseDescription'>{pose.description}</p>
+							</div>
 							{editToggle ? (
 								<button onClick={() => deleteClick(pose)}>x</button>
 							) : (
