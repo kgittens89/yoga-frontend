@@ -17,10 +17,12 @@ function Navigation(props) {
 
 	return (
 		<nav className='navBar'>
-			<div className='header-box'>
-				<img className='yogo-logo' src={DarkYogaGirl} alt='Logo' />
-				<h1 className='header-text'>The Flow Factory</h1>
-			</div>
+			<Link to='/'>
+				<div className='header-box'>
+					<img className='yogo-logo' src={DarkYogaGirl} alt='Logo' />
+					<h1 className='header-text'>The Flow Factory</h1>
+				</div>
+			</Link>
 			<div className='buttonDiv'>
 				<button onClick={handleToggle}>
 					{navbarOpen ? (

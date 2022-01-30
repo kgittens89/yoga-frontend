@@ -10,7 +10,9 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		const sequenceObj = sequencePose.map((pose) => {
 			return {
 				englishName: pose.englishName,
+				sanskritName: pose.sanskritName,
 				image: pose.image,
+				description: pose.description
 			};
 		});
 
