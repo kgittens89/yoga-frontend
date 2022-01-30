@@ -4,7 +4,7 @@
 	justify-content: flex-start;
     align-items: center;
 	position: relative;
-    width: 560px;
+    width: 375px;
 }
 
 .header-text {
@@ -16,8 +16,8 @@
 
 .yogo-logo {
 	height: 50px;
-    padding-left: 5%;
-    padding-right: 0px;
+    padding-left: 2%;
+    padding-right: 0%;
 }
 .navBar {
 	display: flex;
@@ -25,13 +25,14 @@
 }
 
 .navBar button {
-	position: relative;
-	left: 5%;
+	position: absolute;
 	cursor: pointer;
 	background: transparent;
 	margin-right: 12px;
 	border: none;
     z-index: 51;
+	right: 0;
+	padding-top: 8px;
 }
 
 .menuNav {
