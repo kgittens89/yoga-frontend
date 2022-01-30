@@ -19,9 +19,12 @@
 
 li {
 	list-style: none;
-	font-size: 1.6em;
+	font-size: 1.7em;
 	padding: 4%;
 	text-transform: uppercase;
+}
+li :hover {
+	text-decoration: underline;
 }
 
 a {

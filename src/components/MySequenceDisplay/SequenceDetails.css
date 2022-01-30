@@ -1,7 +1,9 @@
 .imageSequence {
-	height: 12em;
-	max-width: 60%;
+	height: auto;
+	max-width: 53%;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .editSeqDetailsBtn {
 	margin: auto 0;
@@ -21,5 +23,61 @@
 	justify-content: space-between;
 	margin: 20px;
 	background: #e991b2;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+.seqPoseNameBlock {
+    width: 100%;
+    padding: 5%;
+}
+.seqPoseDescription {
+    text-align: left;
+    padding-top: 5px;
+    font-size: smaller;
+}
+.seqEnglishName {
+    font-size: large;
+    font-weight: bold;
+}
+.seqSanskritName {
+    font-size: 15px;
+    color: #a70741;
+    font-style: italic;
+    padding: 4%;
+}
+
+@media (max-width: 700px) {
+    .sequenceDetailsBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px;
+        background: #e991b2;
+        border-radius: 10px;
+    }
+    .imageSequence {
+        height: 100%;
+        max-width: 100vw;
+        object-fit: cover;
+        border-radius: 10px;
+        /* border-top-left-radius: 10px; */
+        /* border-top-right-radius: 10px; */
+    }
+    .seqPoseNameBlock {
+        width: 80vw;
+    }
+    .seqPoseDescription {
+        text-align: left;
+        padding-top: 2%;
+        font-size: smaller;
+    }
+    .seqEnglishName {
+        font-size: large;
+        font-weight: bold;
+    }
+    .seqSanskritName {
+        font-size: 15px;
+        color: #a70741;
+        font-style: italic;
+        padding: 2%;
+    }
 }

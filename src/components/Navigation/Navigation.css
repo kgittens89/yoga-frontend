@@ -62,6 +62,9 @@
 .navLink {
 	color: white;
 }
+.navLink :hover {
+	text-decoration: underline;
+}
 
 .buttonDiv {
     width: 17%;
