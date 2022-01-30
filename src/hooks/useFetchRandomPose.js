@@ -1,39 +1,26 @@
 import { useState, useEffect } from 'react';
 
 function useFetchRandomPose() {
-    const [pose, setPose] = useState();
-    const [poseData, setPoseData] = useState([]);
-    const [randomId, setRandomId] = useState();
-    
-    
+    const [randomId, setRandomId] = useState(null);
+
     useEffect(() => {
-			// fetchRandomPose()
 			getPosesData();
 			//eslint-disable-next-line
 		}, [])
 
-    async function getPosesData() {
+     function getPosesData() {
         const url = 'https://still-sands-89510.herokuapp.com/flowfactory/asana';
-        
-        const res = await fetch(url)
-        const resJson = await res.json()
-        setPoseData(resJson)
-
-        let randomNumber = await Math.floor(Math.random() * poseData.length);
-        
-        const poseObj = await poseData.filter((pose) => {
-            console.log(pose.id)
-            return pose.id === randomNumber;
-        });
-
-        setPose( poseObj );
-
-        let randomPathId = await pose[0]._id
-
-        setRandomId(randomPathId)
+         fetch(url)
+         .then (res => res.json())
+             .then((res) => {
+                 let randomNumber = Math.floor(Math.random() * res.length);
+               return res[randomNumber - 1]
+        })
+             .then((poseObj) => {
+                setRandomId(poseObj._id)
+            })
+            .catch(err => console.log(err))
     }
-    
-    
     return randomId
 }
 

@@ -1,0 +1,48 @@
+.userSequence {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 20px;
+    align-items: center;
+    margin: 10px;
+    background:rgb(255, 233, 237);
+}
+
+/* .imageSequence {
+  height: 60px;
+} */
+
+.sequenceContainer {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+}
+
+.poseList {
+    border: 1px solid blue;
+}
+.editBtn {
+    background-color: rgb(255, 233, 237);
+    border-radius: 5px;
+	padding: 4px 5px;
+    font-size: 16px;
+    width: 30%;
+    margin-top: 5%;
+}
+.imageEdit {
+    border: 1px solid purple;
+    width: 175px;
+
+}
+.sequenceName :hover{
+    text-decoration: underline;
+}
+.sequenceName {
+    padding: 20px 10px 5px 10px;
+}
+.collapsibleHeader {
+    font-style: italic;
+    padding: 5px 0px 10px 0px;
+    cursor: pointer;
+}

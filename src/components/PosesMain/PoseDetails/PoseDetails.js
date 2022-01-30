@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
 import { useParams } from 'react-router-dom';
+import Navigation from '../../Navigation/Navigation';
 
-import Header from '../../Header/Header';
+import '../PoseDetails/PoseDetails.css';
 
 function PoseDetails(props) {
 	const [pose, setPose] = useState(null);
@@ -30,14 +30,25 @@ function PoseDetails(props) {
 	}
 	return (
 		<div>
-			<h2>{pose.englishName}</h2>
-			<img src={pose.image} alt={pose.englishName} />
-			<div className='details'>
-				<p>{pose.sanskritName}</p>
-				<p>{pose.difficulty}</p>
-				<p>{pose.description}</p>
-				<p>{pose.categories[0].catName}</p>
-				<p>{pose.categories[0].catDescription}</p>
+			<Navigation />
+			<div className='whiteBk'>
+				<div className='cardContainer'>
+					<h2 className='english'>{pose.englishName}</h2>
+					<p className='sans'>
+						Sanskrit Name: <p className='sName'>{pose.sanskritName}</p>
+					</p>
+					<img className='img' src={pose.image} alt={pose.englishName} />
+					<div className='container'>
+						<div className='details'>
+							<p className='words'>{pose.description}</p>
+							<br />
+							<p className='level'>Challenge Level: {pose.difficulty}</p>
+							<br />
+							<p>{pose.categories[0].catName}</p>
+							<p>{pose.categories[0].catDescription}</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
