@@ -70,16 +70,20 @@ function SequenceDetails(props) {
 		<div>
 			<Navigation />
 			<div className='whiteBk'>
-				{editToggle ? (
-					<input
-						type='text'
-						value={sequence.sequenceName}
-						onChange={handleChange}
-					/>
-				) : (
-					<h2>{sequence.sequenceName}</h2>
-				)}
-				<button onClick={handleEditClick}><AiOutlineEdit size={25}/></button>
+				<div className='sequenceDetailsHeader'>
+					{editToggle ? (
+						<input
+							type='text'
+							value={sequence.sequenceName}
+							onChange={handleChange}
+							className='changeNameInput'
+						/>
+					) : (
+						<h2>{sequence.sequenceName}</h2>
+					)}
+					<button className='editSeqDetailsBtn' onClick={handleEditClick}><AiOutlineEdit size={25}/></button>
+
+				</div>
 				{sequence.sequencePoses.map((pose) => {
 					return (
 						<div className='sequenceDetailsBlock' key={pose._id}>

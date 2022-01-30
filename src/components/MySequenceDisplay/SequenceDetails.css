@@ -1,3 +1,25 @@
 .imageSequence {
-	height: 60px;
+	height: 12em;
+	max-width: 60%;
+    object-fit: cover;
+}
+.editSeqDetailsBtn {
+	margin: auto 0;
+}
+.sequenceDetailsHeader {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0% 10% 0% 20%;
+}
+.changeNameInput {
+	font-size: larger;
+	padding: 2% 0%;
+	margin: 4% 0%;
+}
+.sequenceDetailsBlock {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	background: #e991b2;
+    border-radius: 5px;
 }
