@@ -14,7 +14,7 @@ function SequenceDetails({
 	deleteClick,
 }) 
 {
-		const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
 	return (
 		<div className='userSequence'>
@@ -30,15 +30,10 @@ function SequenceDetails({
 					<div className='content'>
 						{sequence.sequencePoses.map((pose) => {
 							return (
-								<div className='imageEdit'>
-									<p key={pose.id}>{pose.englishName}</p>
-									{/* <img
-											src={pose.image}
-											alt={pose.englishName}
-											className='imageSequence'
-										/> */}
+								<div className='poseListEdit'>
+									<p key={pose.id} className='poseListNames'>{pose.englishName}</p>
 									{index === currentEdit && editToggle ? (
-										<button onClick={() => deleteClick(pose)}>
+										<button className='deletePoseBtn' onClick={() => deleteClick(pose)}>
 											<AiOutlineCloseCircle size={20} />
 										</button>
 									) : (

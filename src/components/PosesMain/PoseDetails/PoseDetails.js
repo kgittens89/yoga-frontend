@@ -32,20 +32,23 @@ function PoseDetails(props) {
 		<div>
 			<Navigation />
 			<div className='whiteBk'>
+				<br />
 				<div className='cardContainer'>
 					<h2 className='english'>{pose.englishName}</h2>
 					<p className='sans'>
-						Sanskrit Name: <p className='sName'>{pose.sanskritName}</p>
+						Sanskrit Name: <span className='sName'>{pose.sanskritName}</span>
 					</p>
 					<img className='img' src={pose.image} alt={pose.englishName} />
 					<div className='container'>
 						<div className='details'>
-							<p className='words'>{pose.description}</p>
-							<br />
 							<p className='level'>Challenge Level: {pose.difficulty}</p>
+							<p className='description'>{pose.description}</p>
 							<br />
-							<p>{pose.categories[0].catName}</p>
-							<p>{pose.categories[0].catDescription}</p>
+							<br />
+							<p className='catName'>{pose.categories[0].catName}</p>
+							<p className='catdescription'>
+								{pose.categories[0].catDescription}
+							</p>
 						</div>
 					</div>
 				</div>

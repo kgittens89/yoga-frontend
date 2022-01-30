@@ -5,35 +5,24 @@
     border-radius: 20px;
     align-items: center;
     margin: 10px;
-    background:rgb(255, 233, 237);
+    background:rgb(255, 224, 229);
 }
-
-/* .imageSequence {
-  height: 60px;
-} */
 
 .sequenceContainer {
     display: grid;
-    margin: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     grid-auto-rows: auto;
+    grid-gap: 10px;
 }
 
-.poseList {
-    border: 1px solid blue;
-}
 .editBtn {
-    background-color: rgb(255, 233, 237);
+    background-color: rgb(255, 239, 242);
     border-radius: 5px;
 	padding: 4px 5px;
     font-size: 16px;
     width: 30%;
     margin-top: 5%;
-}
-.imageEdit {
-    border: 1px solid purple;
-    width: 175px;
-
 }
 .sequenceName :hover{
     text-decoration: underline;
@@ -45,4 +34,22 @@
     font-style: italic;
     padding: 5px 0px 10px 0px;
     cursor: pointer;
+}
+.poseListEdit {
+	margin: 0px 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.userSequence {
+	padding-bottom: 1em;
+}
+.poseListNames {
+	text-align: left;
+    padding: 5px;
+}
+.deletePoseBtn {
+    border: none;
+    background: transparent;
+    margin-left: 5px;
 }

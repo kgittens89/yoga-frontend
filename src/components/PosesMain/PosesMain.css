@@ -2,24 +2,25 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	grid-auto-rows: minmax(200px, 1fr);
-	grid-gap: 10px;
+	grid-gap: 4px;
 	margin: 10px;
 	margin-left: 28%;
-	margin-right: 5%;
+	margin-right: 3%;
 }
 
 .poseCard {
-	border-radius: 5px;
+	border-radius: 10px;
 	display: grid;
 	max-width: 250px;
 	justify-content: center;
 	margin: 0.5em;
-	background: #f5eeea;
+	background: #f78cb3;
 	width: auto;
+	padding: 5px;
 }
 
 .cardImage {
-	height: 175px;
+	height: 170px;
 	align-items: center;
 	display: flex;
 	max-width: 100%;
@@ -42,5 +43,6 @@
 }
 
 .posesMainHowTo {
-	margin: 0% 10%
+	margin: 0% 10%;
+	line-height: 24px;
 }

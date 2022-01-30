@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MySequenceNav from '../MySequenceNav/MySequenceNav';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { BsBookmarkHeart } from 'react-icons/bs';
 
 import Navigation from '../Navigation/Navigation';
 import '../PosesMain/PosesMain.css';
@@ -35,9 +36,8 @@ function PosesMain(props) {
 				<h1 className='pageTitle'>All Poses</h1>
 				<p className='posesMainHowTo'>
 					Hello fellow yogis! Below you'll find an extensive list of asanas to
-					help you create your perfect sequence. Once you're ready to start
-					building, click the '+' on any of the cards to add them to your
-					sequence. Once you're done, don't forget to save!
+					help you create your perfect sequence. Once you're done creating, don't forget
+					to save <BsBookmarkHeart size={19} />
 				</p>
 				<div className='main-poses'>
 					<MySequenceNav
@@ -58,7 +58,7 @@ function PosesMain(props) {
 										<button
 											className='addPoseBtn'
 											onClick={() => handleClick(pose)}>
-											<AiOutlinePlusCircle size={35} className='addBtn' />
+											<AiOutlinePlusCircle size={35} />
 										</button>
 									</div>
 								</div>
