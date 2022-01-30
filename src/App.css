@@ -43,9 +43,9 @@ h1 {
 .saveSequence {
 	background-color: rgb(255, 233, 237);
 	border-radius: 5px;
-	padding: 4px 5px;
+	padding: 4px 10px 4px 6px;
 	margin-top: 15px;
-	width: 88%;
+	width: 99%;
 	word-wrap: normal;
 	max-width: 140px;
 }

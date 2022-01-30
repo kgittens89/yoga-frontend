@@ -14,7 +14,7 @@ function SequenceDetails({
 	deleteClick,
 }) 
 {
-		const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
 	return (
 		<div className='userSequence'>
