@@ -31,22 +31,25 @@ function PoseDetails(props) {
 	return (
 		<div>
 			<Navigation />
-			<div className='cardContainer'>
-				<h2 className='english'>{pose.englishName}</h2>
-				<p className='sans'>
-					Sanskrit Name: <p className='sName'>{pose.sanskritName}</p>
-				</p>
-				<img className='img' src={pose.image} alt={pose.englishName} />
-				<div className='container'>
-					<div className='details'>
-						<p className='description'>{pose.description}</p>
-						<br />
-						<p className='level'>Challenge Level: {pose.difficulty}</p>
-						<br />
-						<p className='catName'>{pose.categories[0].catName}</p>
-						<p className='catdescription'>
-							{pose.categories[0].catDescription}
-						</p>
+			<div className='whiteBk'>
+				<br />
+				<div className='cardContainer'>
+					<h2 className='english'>{pose.englishName}</h2>
+					<p className='sans'>
+						Sanskrit Name: <p className='sName'>{pose.sanskritName}</p>
+					</p>
+					<img className='img' src={pose.image} alt={pose.englishName} />
+					<div className='container'>
+						<div className='details'>
+							<p className='level'>Challenge Level: {pose.difficulty}</p>
+							<p className='description'>{pose.description}</p>
+							<br />
+							<br />
+							<p className='catName'>{pose.categories[0].catName}</p>
+							<p className='catdescription'>
+								{pose.categories[0].catDescription}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

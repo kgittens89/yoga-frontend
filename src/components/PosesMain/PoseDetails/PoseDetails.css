@@ -1,14 +1,12 @@
 .cardContainer {
 	border: 2px solid black;
-	border-radius: 25px;
-	padding: 8px;
-	margin: 8%;
+	border-radius: 10px;
+
+	margin: 5%;
 }
 
 .container {
 	display: flex;
-	/* padding: 15% */
-	/* margin: 5% 5%; */
 }
 
 p {
@@ -16,35 +14,34 @@ p {
 }
 
 .english {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	font-size: xx-large;
 	font-weight: bolder;
 	color: #a70741;
 	background-color: #f5eeea;
 	justify-items: center;
 	margin: 0px;
+	padding: 1%;
 }
 
 .img {
 	display: flex;
 	align-items: right;
-	/* object-fit: contain; */
 	object-fit: cover;
-	justify-content: flex-end;
 	max-width: 100%;
 	height: auto;
-
-	/* max-height: auto; */
+	margin: 0 auto;
 }
 
 .details {
 	font-size: large;
 	font-weight: bold;
-	/* color: #a70741; */
 	background-color: #f39bbb;
-	/* flex-shrink: 2; */
 	justify-items: flex-start;
-	border-radius: 10px;
 	padding: 4%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 .description {
@@ -54,6 +51,7 @@ p {
 
 .catName {
 	font-weight: bold;
+	padding-bottom: 2%;
 }
 
 .catdescription {
@@ -62,6 +60,8 @@ p {
 }
 .level {
 	color: #a70741;
+	padding-top: 1%;
+	padding-bottom: 2%;
 }
 
 .sans {
@@ -70,6 +70,7 @@ p {
 	background-color: #a70741;
 	margin: 0px;
 	color: #fa90b7;
+	padding: 1%;
 }
 
 .sName {
