@@ -1,7 +1,8 @@
 .cardContainer {
-	/* border: 1px solid black; */
-	margin: 0% 8%;
-	padding: 8% 0%;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding: 8px;
+	margin: 8%;
 }
 
 .container {
@@ -42,14 +43,23 @@ p {
 	background-color: #f39bbb;
 	/* flex-shrink: 2; */
 	justify-items: flex-start;
+	border-radius: 10px;
 	padding: 4%;
 }
 
-.words {
+.description {
 	font-size: 14px;
 	text-align: left;
 }
 
+.catName {
+	font-weight: bold;
+}
+
+.catdescription {
+	font-size: 14px;
+	text-align: left;
+}
 .level {
 	color: #a70741;
 }
@@ -57,7 +67,9 @@ p {
 .sans {
 	font-size: x-large;
 	font-weight: bold;
-	/* color: black; */
+	background-color: #a70741;
+	margin: 0px;
+	color: #fa90b7;
 }
 
 .sName {
