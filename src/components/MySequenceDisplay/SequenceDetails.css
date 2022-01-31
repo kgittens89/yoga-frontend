@@ -48,16 +48,28 @@
 .editSeqBtn {
     margin: 0px 8px;
     padding: .5%;
+    cursor: pointer;
 }
-.deletePoseBtn {
+.deletePoseBtnSeq {
     align-self: flex-start;
     padding: 5px;
     position: absolute;
     right: 0;
     margin-right:20px;
+    border: none;
+    background: transparent;
+    color: black;
+}
+.deletePoseBtnSeq :hover {
+    color: white;
+    cursor: pointer;
 }
 .deletePoseBtn :hover {
-    color: white;
+    color: #d80a56;
+    cursor: pointer;
+}
+.deletePoseBtn {
+    display: flex;
 }
 
 @media (max-width: 700px) {
