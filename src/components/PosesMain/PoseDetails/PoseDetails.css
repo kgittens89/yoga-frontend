@@ -47,11 +47,12 @@ p {
 .description {
 	font-size: 14px;
 	text-align: left;
+	padding-bottom: 0px;
+	padding-top: 5px;
 }
-
 .catName {
 	font-weight: bold;
-	padding: 2% 0%;
+	padding: 2% 0% 1% 0%;
 	text-align: left;
 	font-size: medium;
 }
@@ -59,14 +60,11 @@ p {
 .catdescription {
 	font-size: 14px;
 	text-align: left;
-	max-width: 900px;
-	padding-bottom: 1%;
+	padding-bottom: 1.5%;
 }
 .level {
 	color: #a70741;
-	padding-top: 1%;
-	padding-bottom: 2%;
-	margin: 10px;
+	margin: 8px;
 }
 
 .sans {
