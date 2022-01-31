@@ -53,7 +53,6 @@ The Flow Factory is a yoga application designed for both, new yogis & teachers. 
 
 
 
-
 ### MVP Goals
 
 - As a user, I want to be able to see a list of all available yoga poses so that I know what poses are available to me
@@ -62,9 +61,17 @@ The Flow Factory is a yoga application designed for both, new yogis & teachers. 
 - As a user, I want to be able to edit and remove poses within the sequence I create, so that I do not have to worry if I change my mind
 
 
-
 ### Stretch Goals
 
 - As a user, I want to be able to search for poses so that I can find poses related to my search 
 - As a user, I would like sequences suggested to me so that I can learn how to pick the next pose in the sequence 
 - As a user, I would like there to be a list of preset sequences so that I see the most common flow sequences 
+
+
+### Unsolved Problems and where to go next!
+
+- While we finished MVP, we have many ideas of where to take the project. Firsly, we would like to make the pose details page into a model instead of its own page. This way it does not redirect the user when they are in the middle of sequence creation.
+- Next, we would like to create a filter system at the top of the all poses page, this way users will have an easier time finding the next pose they are looking for. In this filter, they would be able to select the category of pose they want displayed on the page. These have already bee added within the API, we would simply need to build out the functionality on the front end. In addition to the filter, a search functionality would be ideal in the user experience so they can narrow down the poses they want to find.
+- We would also love to create a log in system to eventually create sequences that will be saved to a particular user. This way, a user will not have to see a ton of sequences that are not theirs. 
+- If a log in is created, We want users to have access to a variety of preset sequences to add to their library of sequences. Right now, the base app has sun salutation only, so this would involve also creating more base sequences on the backend.
+- Lastly, we are gettiing a few error messages that we have not yet been able to resolve after many hours of tinkering. However, everything is rendering on the page as expected, so this would simply be cleaning up the code.
