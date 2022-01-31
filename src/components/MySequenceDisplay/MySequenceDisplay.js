@@ -56,7 +56,7 @@ function MySequenceDisplay() {
 		<div>
 			<Navigation />
 			<div className='whiteBk'>
-				<h1 className='pageTitle'>My Sequences</h1>
+				<h1 className='pageTitle'>User Sequences</h1>
 				<div className='sequenceContainer'>
 					{usersequences.map((sequence, index) => {
 						return (

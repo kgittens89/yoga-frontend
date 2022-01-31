@@ -17,7 +17,7 @@ function Home() {
                     <Link to='/posesMain'>All Poses</Link>
                 </li>
                 <li>
-                    <Link to='/mySequence'>My Sequences</Link>
+                    <Link to='/mySequence'>User Sequences</Link>
                 </li>
                 <li>
                     <Link to={`/poseDetails/${idForRandomPose}`}>Random Pose</Link> 
