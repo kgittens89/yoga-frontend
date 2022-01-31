@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# The Flow Factory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+The Flow Factory is a yoga application designed for both, new yogis & teachers. Users are able to search a library of yoga poses and create their own sequences.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- CSS
+- HTML
+- MongoDB/Mongoose
+- Express
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live App
 
-### `npm test`
+[Click here to view the live application](https://theflowfactory.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots from live application
 
-### `npm run build`
+<img width="717" alt="Flow Factory Live Homepage" src="https://user-images.githubusercontent.com/83593663/151820954-bd58da80-dbe4-4332-8f80-d1fba1205ab6.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="714" alt="Flow Factory Live Sequence Build Page" src="https://user-images.githubusercontent.com/83593663/151821130-0f41004c-fce3-446f-97eb-7c0e5f726f17.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="712" alt="Flow Factory Live Pose Details Page" src="https://user-images.githubusercontent.com/83593663/151821223-0162030d-e244-4b04-9cf5-f0e26079568f.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="718" alt="Flow Factory Life All Sequences Page" src="https://user-images.githubusercontent.com/83593663/151821323-2e2711b1-e880-486a-8549-c4323472b702.png">
 
-### `npm run eject`
+<img width="773" alt="Flow Facotry Live Individual Sequence Page" src="https://user-images.githubusercontent.com/83593663/151821605-e9a77f3f-260b-4104-a565-fd72e4271432.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="715" alt="Flow Factory Live About Page and Nav Bar" src="https://user-images.githubusercontent.com/83593663/151821691-f4d0de82-905e-453c-8d15-25fddf9b283c.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Visual of your component hierarchy
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="726" alt="components" src="https://user-images.githubusercontent.com/93896422/150869181-4280c62e-8e8c-47f7-ac3c-85e104d5dcec.png">
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Wireframes
+<img width="718" alt="Screen Shot 2022-01-24 at 5 22 24 PM" src="https://user-images.githubusercontent.com/93896422/150875189-90ab0c8f-3534-4a82-8502-b390107f9c20.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="713" alt="Screen Shot 2022-01-24 at 6 57 20 PM" src="https://user-images.githubusercontent.com/93896422/150885124-f237c010-ed5f-4473-907d-5225a18b35c0.png">
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="787" alt="Screen Shot 2022-01-24 at 6 58 06 PM" src="https://user-images.githubusercontent.com/93896422/150885176-d1ad4a37-d982-4e2a-8f53-c918d479b3d2.png">
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="731" alt="Screen Shot 2022-01-24 at 6 58 34 PM" src="https://user-images.githubusercontent.com/93896422/150885304-5ed9c853-2a80-4807-b2b7-981c29c46be9.png">
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="709" alt="Screen Shot 2022-01-24 at 5 22 42 PM" src="https://user-images.githubusercontent.com/93896422/150875288-bc4786be-f43d-4f0e-b9a7-cfdf46f8f999.png">
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### MVP Goals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- As a user, I want to be able to see a list of all available yoga poses so that I know what poses are available to me
+- As a user, I want to be able to click on a pose and see more details so that I can learn more about that specific pose
+- As a user, I want to be able to make my own sequence, so that my flow feels more personalized
+- As a user, I want to be able to edit and remove poses within the sequence I create, so that I do not have to worry if I change my mind
+
+
+
+### Stretch Goals
+
+- As a user, I want to be able to search for poses so that I can find poses related to my search 
+- As a user, I would like sequences suggested to me so that I can learn how to pick the next pose in the sequence 
+- As a user, I would like there to be a list of preset sequences so that I see the most common flow sequences 
