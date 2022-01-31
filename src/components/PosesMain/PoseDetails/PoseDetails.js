@@ -41,14 +41,36 @@ function PoseDetails(props) {
 					<img className='img' src={pose.image} alt={pose.englishName} />
 					<div className='container'>
 						<div className='details'>
-							<p className='level'>Challenge Level: {pose.difficulty}</p>
+							<h3 className='level'>Challenge Level: {pose.difficulty}</h3>
 							<p className='description'>{pose.description}</p>
 							<br />
-							<br />
-							<p className='catName'>{pose.categories[0].catName}</p>
-							<p className='catdescription'>
-								{pose.categories[0].catDescription}
-							</p>
+							<div className='categoriesDisplay'>
+								<h3 className='level'>Categories</h3>
+								{pose.categories[0] != null && (
+									<>
+										<p className='catName'>{pose.categories[0].catName}</p>
+										<p className='catdescription'>
+											{pose.categories[0].catDescription}
+										</p>
+									</>
+								)}
+								{pose.categories[1] != null && (
+									<>
+										<p className='catName'>{pose.categories[1].catName}</p>
+										<p className='catdescription'>
+											{pose.categories[1].catDescription}
+										</p>
+									</>
+								)}
+								{pose.categories[2] != null && (
+									<>
+										<p className='catName'>{pose.categories[2].catName}</p>
+										<p className='catdescription'>
+											{pose.categories[2].catDescription}
+										</p>
+									</>
+								)}
+							</div>
 						</div>
 					</div>
 				</div>
