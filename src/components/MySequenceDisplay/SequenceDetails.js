@@ -9,70 +9,74 @@ import axios from 'axios';
 function SequenceDetails(props) {
 	const [editToggle, setEditToggle] = useState(false);
 	const [sequence, setSequence] = useState(null);
+	const [sequenceName, setSequenceName] = useState();
 	const { sequenceId } = useParams();
 	const navigate = useNavigate();
-
+	
 	useEffect(() => {
-		// const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
-
-		// fetch(url)
-		// .then((res) => res.json())
-		// .then((res) => {
-		//     setSequence(res);
-		// });
 		getSequence();
 		//eslint-disable-next-line
 	}, [sequence]);
-
+	
 	const getSequence = () => {
 		const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
-
+		
 		fetch(url)
-			.then((res) => res.json())
-			.then((res) => {
-				setSequence(res);
-			});
+		.then((res) => res.json())
+		.then((res) => {
+			setSequence(res);
+		});
 	};
-
+	
 	const handleEditClick = () => {
-		let tempSeq = { ...sequence };
-		console.log(tempSeq);
 		setEditToggle(!editToggle);
 	};
-
+	
 	const handleChange = (e) => {
-		setSequence({ ...sequence, sequenceName: e.target.value });
+		setSequenceName(e.target.value);
 	};
 
+		const handleSave = () => {
+			updateFetch({
+				sequenceName: sequenceName,
+			});
+			navigate('/mySequence');
+		};
+	
 	const handleDeleteSequence = () => {
 		const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/${sequenceId}`;
-
+		
 		axios.delete(url)
-			.then(() => navigate('/mysequence'))
+		.then(() => navigate('/mysequence'))
 		.catch(err => console.log(err))
 	}
 
-	const deleteClick = (pose) => {
-		console.log(pose);
-		let tempArr = [...sequence.sequencePoses];
-		console.log(tempArr);
-		// let tempArrPoses = tempArr[0].sequencePoses;
+		const updateFetch = (update) => {
+			axios
+				.put(
+					`https://still-sands-89510.herokuapp.com/flowfactory/sequence/${sequenceId}`,
+					update
+				)
+				.then((res) => console.log(res))
+				.catch((err) => console.log(err));
+			getSequence();
+		};
+	
+		const deleteClick = (pose) => {
+			let tempArr = [...sequence.sequencePoses];
+			let idxToDelete = tempArr.findIndex((temp) => {
+				return temp._id === pose._id;
+			});
 
-		let idxToDelete = tempArr.findIndex((temp) => {
-			return temp._id === pose._id;
-		});
-		console.log(idxToDelete);
-		tempArr.splice(idxToDelete, 1);
-		console.log(tempArr);
-		// axios
-		// 	.put(
-		// 		`https://still-sands-89510.herokuapp.com/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
-		// 	)
-		// 	.then((res) => console.log(res))
-		// 	.catch((err) => console.log(err));
-		// getSequences();
-	};
+			tempArr.splice(idxToDelete, 1);
 
+			const obj = {
+				sequenceName: sequenceName,
+				sequencePoses: tempArr,
+			};
+			updateFetch(obj);
+		};
+	
 	if (!sequence) {
 		return <p>Loading...</p>;
 	}
@@ -84,16 +88,24 @@ function SequenceDetails(props) {
 					{editToggle ? (
 						<input
 							type='text'
-							value={sequence.sequenceName}
+							value={sequenceName}
 							onChange={handleChange}
 							className='changeNameInput'
 						/>
 					) : (
 						<h2>{sequence.sequenceName}</h2>
 					)}
-					<button className='editSeqDetailsBtn' onClick={handleEditClick}><AiOutlineEdit size={25} /></button>
-					{editToggle ? <button onClick={handleDeleteSequence}>Delete Sequence</button> : ''}
+					<button className='editSeqDetailsBtn' onClick={handleEditClick}>
+						<AiOutlineEdit size={25} />
+					</button>
 
+					{editToggle ? <button onClick={handleSave}>Save</button> : ''}
+
+					{editToggle ? (
+						<button onClick={handleDeleteSequence}>Delete Sequence</button>
+					) : (
+						''
+					)}
 				</div>
 				{sequence.sequencePoses.map((pose) => {
 					return (
@@ -119,6 +131,7 @@ function SequenceDetails(props) {
 			</div>
 		</div>
 	);
-}
-
-export default SequenceDetails;
+						}
+						
+						export default SequenceDetails;
+						
