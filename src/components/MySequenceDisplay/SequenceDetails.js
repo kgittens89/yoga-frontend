@@ -93,6 +93,7 @@ function SequenceDetails(props) {
 						<input
 							type='text'
 							value={sequenceName}
+							placeholder={sequence.sequenceName}
 							onChange={handleChange}
 							className='changeNameInput'
 						/>
@@ -134,8 +135,10 @@ function SequenceDetails(props) {
 								<p className='seqPoseDescription'>{pose.description}</p>
 							</div>
 							{editToggle ? (
-								<button className='deletePoseBtnSeq' onClick={() => deleteClick(pose)}>
-									<TiDeleteOutline size={40}/>
+								<button
+									className='deletePoseBtnSeq'
+									onClick={() => deleteClick(pose)}>
+									<TiDeleteOutline size={40} />
 								</button>
 							) : (
 								''
