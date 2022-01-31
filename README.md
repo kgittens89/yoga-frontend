@@ -11,8 +11,6 @@ The Flow Factory is a yoga application designed for both, new yogis & teachers. 
 - JavaScript
 - CSS
 - HTML
-- MongoDB/Mongoose
-- Express
 
 ## Live App
 
