@@ -42,3 +42,13 @@ body {
 	width: 28%;
 	max-width: 250px;
 }
+
+@media (max-width: 700px) {
+	.homeNav {
+		display: flex;
+		flex-direction: column;
+	}
+	.title {
+		font-size: 4em;
+	}
+}
