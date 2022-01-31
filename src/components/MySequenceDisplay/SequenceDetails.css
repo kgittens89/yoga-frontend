@@ -10,6 +10,7 @@
 }
 .sequenceDetailsHeader {
 	display: flex;
+    flex-direction: column;
 	justify-content: space-evenly;
 	margin: 0% 10% 0% 20%;
 }
@@ -43,6 +44,20 @@
     color: #a70741;
     font-style: italic;
     padding: 4%;
+}
+.editSeqBtn {
+    margin: 0px 8px;
+    padding: .5%;
+}
+.deletePoseBtn {
+    align-self: flex-start;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    margin-right:20px;
+}
+.deletePoseBtn :hover {
+    color: white;
 }
 
 @media (max-width: 700px) {
