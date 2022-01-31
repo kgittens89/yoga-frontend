@@ -134,7 +134,7 @@ function SequenceDetails(props) {
 								<p className='seqPoseDescription'>{pose.description}</p>
 							</div>
 							{editToggle ? (
-								<button className='deletePoseBtn' onClick={() => deleteClick(pose)}>
+								<button className='deletePoseBtnSeq' onClick={() => deleteClick(pose)}>
 									<TiDeleteOutline size={40}/>
 								</button>
 							) : (

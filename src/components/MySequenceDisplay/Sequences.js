@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './MySequenceDisplay.css';
+import './SequenceDetails.css'
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import useCollapse from 'react-collapsed';
 //https://blog.logrocket.com/create-collapsible-react-components-react-collapsed/
