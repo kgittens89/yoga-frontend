@@ -50,7 +50,7 @@ function Navigation(props) {
 					</li>
 					<li>
 						<Link className='navLink' to='/mysequence'>
-							My Sequences
+							User Sequences
 						</Link>
 					</li>
 					<li>
