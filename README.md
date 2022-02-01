@@ -3,7 +3,7 @@
 
 ## Project Description
 
-The Flow Factory is a yoga application designed for both, new yogis & teachers. Users are able to search a library of yoga poses and create their own sequences.
+The Flow Factory is a yoga application designed for both, new yogis & teachers. Users are able to browse a library of yoga poses and create their own sequences.
 
 ## Technologies Used
 
