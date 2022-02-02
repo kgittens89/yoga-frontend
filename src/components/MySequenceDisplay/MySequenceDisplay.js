@@ -11,7 +11,7 @@ function MySequenceDisplay() {
 	
 	useEffect(() => {
 		getSequences();
-	}, [usersequences, setUserSequences]);
+	}, [usersequences]);
 
 	const getSequences = () => {
 		let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';

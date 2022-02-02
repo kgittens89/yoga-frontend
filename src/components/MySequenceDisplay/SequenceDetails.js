@@ -16,6 +16,9 @@ function SequenceDetails(props) {
 	const { sequenceId } = useParams();
 	const navigate = useNavigate();
 
+// https://dmitripavlutin.com/react-cleanup-async-effects/
+	// I've tried several things to fix the console errors coming from the memory leak. The above article helped to understand the problem, but I haven't been able to find anything to fix it 😩
+
 	useEffect(() => {
 		getSequence();
 		//eslint-disable-next-line
