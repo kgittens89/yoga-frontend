@@ -16,13 +16,16 @@ function SequenceDetails(props) {
 	const { sequenceId } = useParams();
 	const navigate = useNavigate();
 
+// https://dmitripavlutin.com/react-cleanup-async-effects/
+	// I've tried several things to fix the console errors coming from the memory leak. The above article helped to understand the problem, but I haven't been able to find anything to fix it 😩
+
 	useEffect(() => {
 		getSequence();
 		//eslint-disable-next-line
 	}, [sequence]);
 
 	const getSequence = () => {
-		const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
 
 		fetch(url)
 			.then((res) => res.json())
@@ -47,7 +50,7 @@ function SequenceDetails(props) {
 	};
 
 	const handleDeleteSequence = () => {
-		const url = `https://still-sands-89510.herokuapp.com/flowfactory/sequence/${sequenceId}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/${sequenceId}`;
 
 		axios
 			.delete(url)
@@ -58,7 +61,7 @@ function SequenceDetails(props) {
 	const updateFetch = (update) => {
 		axios
 			.put(
-				`https://still-sands-89510.herokuapp.com/flowfactory/sequence/${sequenceId}`,
+				`https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/${sequenceId}`,
 				update
 			)
 			.then((res) => console.log(res))

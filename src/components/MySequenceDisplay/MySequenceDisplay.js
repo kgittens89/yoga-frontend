@@ -11,10 +11,11 @@ function MySequenceDisplay() {
 	
 	useEffect(() => {
 		getSequences();
-	}, [usersequences, setUserSequences]);
+	}, [usersequences]);
 
 	const getSequences = () => {
-		let url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
+		let url =
+			'https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence';
 
 		fetch(url)
 			.then((res) => res.json())
@@ -42,7 +43,7 @@ function MySequenceDisplay() {
 		
 		axios
 			.put(
-				`https://still-sands-89510.herokuapp.com/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
+				`https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
 			)
 			.then((res) => console.log(res))
 			.catch((err) => console.log(err));
