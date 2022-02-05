@@ -14,7 +14,7 @@ The Flow Factory is a yoga application designed for both, new yogis & teachers. 
 
 ## Live App
 
-[Click here to view the live application](https://theflowfactory.netlify.app/)
+[Click here to view the live application](https://clever-montalcini-9e14ea.netlify.app)
 
 ### Screenshots from live application
 
