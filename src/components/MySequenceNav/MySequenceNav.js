@@ -21,7 +21,8 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 			sequencePoses: sequenceObj,
 		};
 
-		const url = 'https://still-sands-89510.herokuapp.com/flowfactory/sequence';
+		const url =
+			'https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence';
 
 		axios.post(url, obj)
 			.then((err) => console.log(err));
