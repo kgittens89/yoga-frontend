@@ -24,10 +24,15 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		const url =
 			'https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence';
 
-		axios.post(url, obj)
-			.then((err) => console.log(err));
-		setSequencePose([])
-		navigate('/mysequence');
+		axios
+			.post(url, obj)
+			.then((data) => setTimeout(() => {
+				navigate(`/sequenceDetails/${data.data._id}`)
+			}, 1000))
+			// navigate('/mysequence'))
+			setSequencePose([])
+		// Working on getting it to go to the sequenceDetails/_id route. Check backend to see if it's returning the newly made sequence object (want this!). Then use that return(res.body._id) to navigate(`sequenceDetails/${res.body._id}`)
+
 		// Try to add logic to navigate to new sequenceDetails page. Was considering grabbing the res._id from return. I believe that the backend is returning the newly created sequence when posted ??
 	};
 
