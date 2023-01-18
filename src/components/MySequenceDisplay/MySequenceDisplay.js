@@ -15,7 +15,7 @@ function MySequenceDisplay() {
 
 	const getSequences = () => {
 		let url =
-			'https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence';
+			'https://yoga-production-8fa1.up.railway.app/flowfactory/sequence';
 
 		fetch(url)
 			.then((res) => res.json())
@@ -43,7 +43,7 @@ function MySequenceDisplay() {
 		
 		axios
 			.put(
-				`https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
+				`https://yoga-production-8fa1.up.railway.app/flowfactory/sequence/pose/${tempArr[0]._id}/${pose._id}`
 			)
 			.then((res) => console.log(res))
 			.catch((err) => console.log(err));

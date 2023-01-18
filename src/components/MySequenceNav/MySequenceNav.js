@@ -22,7 +22,7 @@ function MySequenceNav({ sequencePose, setSequencePose }) {
 		};
 
 		const url =
-			'https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence';
+			'https://yoga-production-8fa1.up.railway.app/flowfactory/sequence';
 
 		axios
 			.post(url, obj)
