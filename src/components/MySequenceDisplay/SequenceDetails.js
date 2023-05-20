@@ -25,7 +25,7 @@ function SequenceDetails(props) {
 	}, [sequence]);
 
 	const getSequence = () => {
-		const url = `https://yoga-production-8fa1.up.railway.app/flowfactory/sequence/sequenceDetails/${sequenceId}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/sequenceDetails/${sequenceId}`;
 
 		fetch(url)
 			.then((res) => res.json())
@@ -50,7 +50,7 @@ function SequenceDetails(props) {
 	};
 
 	const handleDeleteSequence = () => {
-		const url = `https://yoga-production-8fa1.up.railway.app/flowfactory/sequence/${sequenceId}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/${sequenceId}`;
 
 		axios
 			.delete(url)
@@ -61,7 +61,7 @@ function SequenceDetails(props) {
 	const updateFetch = (update) => {
 		axios
 			.put(
-				`https://yoga-production-8fa1.up.railway.app/flowfactory/sequence/${sequenceId}`,
+				`https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/${sequenceId}`,
 				update
 			)
 			.then((res) => console.log(res))

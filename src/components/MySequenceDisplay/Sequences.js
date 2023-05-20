@@ -20,7 +20,7 @@ function Sequences({
 
 	function handleDelete(){
 		console.log('delete')
-		const url = `https://yoga-production-8fa1.up.railway.app/flowfactory/sequence/${sequence._id}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/sequence/${sequence._id}`;
 		axios.delete(url)
 	}
 

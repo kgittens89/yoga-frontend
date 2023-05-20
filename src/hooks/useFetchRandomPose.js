@@ -10,7 +10,7 @@ function useFetchRandomPose() {
 
      function getPosesData() {
         const url =
-					'https://yoga-production-8fa1.up.railway.app/flowfactory/asana';
+					'https://mighty-hamlet-73625.herokuapp.com/flowfactory/asana';
          fetch(url)
          .then (res => res.json())
              .then((res) => {
