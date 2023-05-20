@@ -20,7 +20,7 @@ function PosesMain(props) {
 	};
 
 	async function getAsana() {
-		const url = `https://yoga-production-8fa1.up.railway.app/flowfactory/asana`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/asana`;
 		const res = await fetch(url);
 		const resJson = await res.json();
 		setPoses(resJson);

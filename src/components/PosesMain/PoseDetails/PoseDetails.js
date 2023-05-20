@@ -14,7 +14,7 @@ function PoseDetails(props) {
 	}, [id]);
 
 	async function getPoses() {
-		const url = `https://yoga-production-8fa1.up.railway.app/flowfactory/asana/${id}`;
+		const url = `https://mighty-hamlet-73625.herokuapp.com/flowfactory/asana/${id}`;
 
 		try {
 			const res = await fetch(url);
