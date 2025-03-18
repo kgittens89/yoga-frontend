@@ -3,11 +3,21 @@ import { useState, useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
 import Sequences from './Sequences';
 
+const styles = {
+	loadAnimation: {
+		width: '100%',
+		height: '100vh',
+		display: 'block',
+		margin: 'auto',
+	},
+};
+
 function MySequenceDisplay() {
 	const [usersequences, setUserSequences] = useState([]);
 	const [sequenceToEdit, setSequenceToEdit] = useState([]);
 	const [editToggle, setEditToggle] = useState(false);
 	const [currentEdit, setCurrentEdit] = useState();
+	const [loading, setLoading] = useState(true);
 	
 	useEffect(() => {
 		getSequences();
@@ -20,6 +30,7 @@ function MySequenceDisplay() {
 			.then((res) => res.json())
 			.then((res) => {
 				setUserSequences(res);
+				setLoading(false);
 			});
 	};
 
@@ -49,30 +60,34 @@ function MySequenceDisplay() {
 		getSequences();
 	}
 
-	if (!usersequences) {
-		return <p>Loading...</p>
-	}
 	return (
 		<div>
 			<Navigation />
-			<div className='whiteBk'>
-				<h1 className='pageTitle'>User Sequences</h1>
-				<div className='sequenceContainer'>
-					{usersequences.map((sequence, index) => {
-						return (
-							<Sequences
-								sequence={sequence}
-								index={index}
-								currentEdit={currentEdit}
-								editToggle={editToggle}
-								handleEditClick={handleEditClick}
-								deleteClick={deleteClick}
-								key={index}
-							/>
-						);
-					})}
+			{loading ? (
+				<iframe
+					title='Loading Animation'
+					src='https://lottie.host/embed/f0e2e9ee-9d7f-4a44-94fc-bc2f830df55d/QFssBfu3ds.lottie'
+					style={styles.loadAnimation}></iframe>
+			) : (
+				<div className='whiteBk'>
+					<h1 className='pageTitle'>User Sequences</h1>
+					<div className='sequenceContainer'>
+						{usersequences.map((sequence, index) => {
+							return (
+								<Sequences
+									sequence={sequence}
+									index={index}
+									currentEdit={currentEdit}
+									editToggle={editToggle}
+									handleEditClick={handleEditClick}
+									deleteClick={deleteClick}
+									key={index}
+								/>
+							);
+						})}
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }

@@ -9,14 +9,24 @@ import { BsTrash } from 'react-icons/bs';
 import { AiOutlineSave } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
 
+const styles = {
+	loadAnimation: {
+		width: '100%',
+		height: '100vh',
+		display: 'block',
+		margin: 'auto',
+	},
+};
+
 function SequenceDetails(props) {
 	const [editToggle, setEditToggle] = useState(false);
 	const [sequence, setSequence] = useState(null);
 	const [sequenceName, setSequenceName] = useState();
+	const [loading, setLoading] = useState(true);
 	const { sequenceId } = useParams();
 	const navigate = useNavigate();
 
-// https://dmitripavlutin.com/react-cleanup-async-effects/
+	// https://dmitripavlutin.com/react-cleanup-async-effects/
 	// I've tried several things to fix the console errors coming from the memory leak. The above article helped to understand the problem, but I haven't been able to find anything to fix it 😩
 
 	useEffect(() => {
@@ -31,6 +41,7 @@ function SequenceDetails(props) {
 			.then((res) => res.json())
 			.then((res) => {
 				setSequence(res);
+				setLoading(false);
 			});
 	};
 
@@ -84,72 +95,76 @@ function SequenceDetails(props) {
 		updateFetch(obj);
 	};
 
-	if (!sequence) {
-		return <p>Loading...</p>;
-	}
 	return (
 		<div>
 			<Navigation />
-			<div className='whiteBk'>
-				<div className='sequenceDetailsHeader'>
-					{editToggle ? (
-						<input
-							type='text'
-							value={sequenceName}
-							placeholder={sequence.sequenceName}
-							onChange={handleChange}
-							className='changeNameInput'
-						/>
-					) : (
-						<h2>{sequence.sequenceName}</h2>
-					)}
-					<div className='sequenceBtns'>
-						<button className='editSeqBtn' onClick={handleEditClick}>
-							<AiOutlineEdit size={25} />
-						</button>
-
+			{loading ? (
+				<iframe
+					title='Loading Animation'
+					src='https://lottie.host/embed/f0e2e9ee-9d7f-4a44-94fc-bc2f830df55d/QFssBfu3ds.lottie'
+					style={styles.loadAnimation}></iframe>
+			) : (
+				<div className='whiteBk'>
+					<div className='sequenceDetailsHeader'>
 						{editToggle ? (
-							<button className='editSeqBtn' onClick={handleSave}>
-								<AiOutlineSave size={25} />
-							</button>
-						) : (
-							''
-						)}
-						{editToggle ? (
-							<button className='editSeqBtn' onClick={handleDeleteSequence}>
-								<BsTrash size={25} />
-							</button>
-						) : (
-							''
-						)}
-					</div>
-				</div>
-				{sequence.sequencePoses.map((pose) => {
-					return (
-						<div className='sequenceDetailsBlock' key={pose._id}>
-							<img
-								src={pose.image}
-								alt={pose.englishName}
-								className='imageSequence'
+							<input
+								type='text'
+								value={sequenceName}
+								placeholder={sequence.sequenceName}
+								onChange={handleChange}
+								className='changeNameInput'
 							/>
-							<div className='seqPoseNameBlock'>
-								<div className='seqEnglishName'>{pose.englishName}</div>
-								<div className='seqSanskritName'>{pose.sanskritName}</div>
-								<p className='seqPoseDescription'>{pose.description}</p>
-							</div>
+						) : (
+							<h2>{sequence.sequenceName}</h2>
+						)}
+						<div className='sequenceBtns'>
+							<button className='editSeqBtn' onClick={handleEditClick}>
+								<AiOutlineEdit size={25} />
+							</button>
+
 							{editToggle ? (
-								<button
-									className='deletePoseBtnSeq'
-									onClick={() => deleteClick(pose)}>
-									<TiDeleteOutline size={40} />
+								<button className='editSeqBtn' onClick={handleSave}>
+									<AiOutlineSave size={25} />
+								</button>
+							) : (
+								''
+							)}
+							{editToggle ? (
+								<button className='editSeqBtn' onClick={handleDeleteSequence}>
+									<BsTrash size={25} />
 								</button>
 							) : (
 								''
 							)}
 						</div>
-					);
-				})}
-			</div>
+					</div>
+					{sequence.sequencePoses.map((pose) => {
+						return (
+							<div className='sequenceDetailsBlock' key={pose._id}>
+								<img
+									src={pose.image}
+									alt={pose.englishName}
+									className='imageSequence'
+								/>
+								<div className='seqPoseNameBlock'>
+									<div className='seqEnglishName'>{pose.englishName}</div>
+									<div className='seqSanskritName'>{pose.sanskritName}</div>
+									<p className='seqPoseDescription'>{pose.description}</p>
+								</div>
+								{editToggle ? (
+									<button
+										className='deletePoseBtnSeq'
+										onClick={() => deleteClick(pose)}>
+										<TiDeleteOutline size={40} />
+									</button>
+								) : (
+									''
+								)}
+							</div>
+						);
+					})}
+				</div>
+			)}
 		</div>
 	);
 }
